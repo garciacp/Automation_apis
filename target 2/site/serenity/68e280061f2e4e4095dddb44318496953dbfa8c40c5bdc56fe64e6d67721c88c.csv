@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Autenticacion Andes","usuario con dato seguro en rojo y verde solicita producto en verde","SUCCESS","09:57:48","0.0","6.27"
+"Autenticacion Andes","usuario con dato seguro en rojo - azul y verde solicita producto en verde","SUCCESS","09:58:09","0.0","2.43"
+"Autenticacion Andes","usuario con dato seguro en verde solicita producto en azul","SUCCESS","09:58:16","0.0","2.9"
+"Autenticacion Andes","usuario con dato seguro en verde solicita producto en verde","SUCCESS","09:58:19","0.0","4.77"
+"Autenticacion Andes","usuario con dato seguro en verde solicita producto en rojo","SUCCESS","09:58:24","0.0","2.33"

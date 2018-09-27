@@ -1,0 +1,17 @@
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/FirmaPagareDeceval/FirmaPagareDecevalStepDefinition.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/CrearGirator/CrearGiratorRequest.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/CrearGirator/CrearGiratorAssertion.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/FirmaPagareDeceval/FirmaPagareDecevalAssertion.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/Authentication/AuthenticationAssertions.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/signature/SignatureStepsDefinition.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/Deceval/DecevalStepDefinition.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/Deceval/DecevalRequest.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/Authentication/AuthenticationRequests.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/FirmaPagareDeceval/FirmaPagareDecevalRequest.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/signature/SignatureRequests.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/signature/SignatureAssertions.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/Deceval/DecevalAssertion.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/utils/AssertionsUtil.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/Runner.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/CrearGirator/CrearGiratorStepDefinition.java
+/Users/patik/IdeaProjects/ath-automation/src/test/java/co/com/ath/automation/features/steps/Authentication/AuthenticationStepsDefinition.java

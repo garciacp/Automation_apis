@@ -1,0 +1,30 @@
+{
+  "idCiudadExpedicion_Nat": "11001",
+  "fechaExpedicion_Nat": "1999-05-05",
+  "fechaNacimiento": "2018-09-07T00:00:00",
+  "segundoApellido_Nat": "APELLIDOCDOS",
+  "idClasePersona": "1",
+  "fechahoy": "2018-09-25T00:00:00",
+  "idCiudadDomicilio_Nat": "11001",
+  "numeroDocumento": "79577777",
+  "nombresNat_Nat": "NOMBREUNO NOMBREDOS",
+  "numeroCelular": "3124473685",
+  "idPaisDomicilio_Nat": "CO",
+  "idPaisNacionalidad_Nat": "CO",
+  "idDepartamentoExpedicion_Nat": "11",
+  "fechaNacimiento_Nat": "1989-05-01",
+  "idDepartamentoDomicilio_Nat": "11",
+  "fechaExpedicion": "2018-09-07T00:00:00",
+  "tipoDocumento": "1",
+  "codigoDepositante": "274",
+  "identificacionEmisor": "8600358275",
+  "direccion1PersonaGrupo_PGP": "calle 50 15 50",
+  "usuario": "86003582751",
+  "horahoy": "09:00",
+  "telefono1PersonaGrupo_PGP": "7777777",
+  "correoElectronico": "klingerblano@gmail.com",
+  "primerApellido_Nat": "APELLIDOUNO",
+  "idPaisExpedicion_Nat": "CO"
+
+
+}
