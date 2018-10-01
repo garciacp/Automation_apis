@@ -128,6 +128,6 @@ Scenario: usuario con dato seguro en azul solicita producto en azul
 
 @authentication @DatoCifin
 Scenario: usuario sin dato seguro solicita producto
-    Given usuario sin dato seguro solicita producto
+    Given usuario sin dato seguro solicita producto en azul
     When el envia la peticion para ser autenticado
-    Then la peticion debe ser aprobada en cifin
+    Then la peticion debe ser aprobada en aval

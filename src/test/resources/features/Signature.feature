@@ -64,7 +64,7 @@ Scenario: Usuario Nuevo con un score igual a 90 desea firmar el documento
 Scenario: Usuario Nuevo con un score mayor a 90 desea firmar el documento
     Given Usuario Nuevo con un score mayor a 91
     When el envia la peticion para que sea firmada digitalmente
-    Then la peticion debe ser aprobada cifin
+    Then la peticion debe ser aprobada
 
 
 

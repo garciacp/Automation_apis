@@ -20,4 +20,7 @@ public class DecevalAssertion {
     assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida.codigoGirador"), equalTo("SDLSE.0000"));
   }
 
+  public static void AssertionCuentaotorgante() {
+      assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida.cuentaotorgante"), equalTo("SDLSE.0000"));
+  }
 }
