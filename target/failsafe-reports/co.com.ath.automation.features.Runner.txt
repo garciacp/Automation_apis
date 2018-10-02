@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: co.com.ath.automation.features.Runner
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.812 s - in co.com.ath.automation.features.Runner

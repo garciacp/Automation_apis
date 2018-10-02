@@ -16,25 +16,17 @@ public class DecevalRequest {
   private static String numeroPagareDeceval;
   public FunctionsUtils functionsUtils = new FunctionsUtils();
 
-  public String CrearOtorganteBody() {
-    try {
-      String CrearGiradorBody = IOUtils.toString(
-          this.getClass().getClassLoader().getResourceAsStream("json/Deceval_CrearOtorgante.json"),
-          StandardCharsets.UTF_8
-      );
+  public String CrearOtorganteBody(int numeroDiasMenos, String eliminarCampo) {
 
-      JSONObject jObject  = new JSONObject(CrearGiradorBody);
-      jObject.put("fechahoy",functionsUtils.getDateToday());
+      JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CrearOtorgante.json", DecevalStaticCode.CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO);
+      jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
 
       String CrearGiradorBodyModify =   jObject.toString();
       return CrearGiradorBodyModify;
 
-    } catch (IOException e) {
-      throw new RuntimeException("Error reading file");
-    }
   }
 
-  public String CrearPagareBody() {
+  public String CrearPagareBody(int numeroDiasMenos) {
 
     try {
       String crearPagareBody = IOUtils.toString(
@@ -43,7 +35,7 @@ public class DecevalRequest {
       );
 
       JSONObject jObject  = new JSONObject(crearPagareBody);
-      jObject.put("fechahoy",functionsUtils.getDateToday());
+      jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
       jObject.put("otorganteCuenta", cuentaOtorgante);
       jObject.put("numPagareEntidad", functionsUtils.getNamePagare());
       String crearPagareBodyModify =   jObject.toString();
@@ -54,7 +46,7 @@ public class DecevalRequest {
     }
   }
 
-  public String FirmaPagareBody() {
+  public String FirmaPagareBody(int numeroDiasMenos) {
 
     try {
       String firmaPagareBody = IOUtils.toString(
@@ -63,7 +55,7 @@ public class DecevalRequest {
       );
 
       JSONObject jObject  = new JSONObject(firmaPagareBody);
-      jObject.put("fechahoy",functionsUtils.getDateToday());
+      jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
       jObject.put("idPagare", numeroPagareDeceval);
       return jObject.toString();
 
@@ -72,61 +64,59 @@ public class DecevalRequest {
     }
   }
 
-  public String ConsultarPagareSinPdfBody() {
+  public String ConsultarPagareSinPdfBody(int numeroDiasMenos) {
 
     try {
-      String ConsultarPagareSinPdfBody = IOUtils.toString(
+      String consultarPagareSinPdfBody = IOUtils.toString(
           this.getClass().getClassLoader().getResourceAsStream("json/Deceval_ConsultaSinPdf.json"),
           StandardCharsets.UTF_8
       );
-      return ConsultarPagareSinPdfBody;
+      JSONObject jObject  = new JSONObject(consultarPagareSinPdfBody);
+      jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
+      return jObject.toString();
 
     } catch (IOException e) {
       throw new RuntimeException("Error reading file");
     }
   }
 
-  public String ConsultarPagareConPdfBody() {
+  public String ConsultarPagareConPdfBody(int numeroDiasMenos, String numeroId, String eliminarCampo) {
 
-    try {
-      String ConsultarPagareConPdfBody = IOUtils.toString(
-          this.getClass().getClassLoader().getResourceAsStream("json/Deceval_Consulta_ConPdf.json"),
-          StandardCharsets.UTF_8
-      );
-      return ConsultarPagareConPdfBody;
-
-    } catch (IOException e) {
-      throw new RuntimeException("Error reading file");
-    }
+        JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_Consulta_ConPdf.json", DecevalStaticCode.CONSULTA_PAGARE_POSICION_NUM_PAGARE);
+        jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
+        if(numeroId!=null){
+            jObject.put("numPagareEntidad",numeroId);
+        }
+        return jObject.toString();
   }
 
 
-  public void ConsultaPagareConPdf() throws IOException {
+  public void ConsultaPagareConPdf(int numeroDiasMenos, String numeroId, String eliminarCampo) throws IOException {
 
     given()
         .contentType("application/json")
         .accept("application/json")
-        .body(ConsultarPagareConPdfBody())
+        .body(ConsultarPagareConPdfBody(numeroDiasMenos, numeroId, eliminarCampo))
         .when().post(ServicePaths.pathDeceval_consultaConPdf());
   }
 
-  public void ConsultaPagareSinPdf() throws IOException {
+  public void ConsultaPagareSinPdf(int numeroDiasMenos) throws IOException {
 
     given()
         .contentType("application/json")
         .accept("application/json")
-        .body(ConsultarPagareSinPdfBody())
+        .body(ConsultarPagareSinPdfBody(numeroDiasMenos))
         .when().post(ServicePaths.pathDeceval_consultaSinPdf());
   }
 
 
-  public void CrearOtorgante() throws IOException {
+  public void CrearOtorgante(int numeroDiasMenos, String eliminarCampo) throws IOException {
 
     Response response =
             given()
         .contentType("application/json")
         .accept("application/json")
-        .body(CrearOtorganteBody())
+        .body(CrearOtorganteBody(numeroDiasMenos,eliminarCampo))
         .when().post(ServicePaths.pathDeceval_crearotorgante())
         .then().contentType("application/json")
         .extract().response();
@@ -134,12 +124,12 @@ public class DecevalRequest {
   }
 
 
-  public void CrearPagare() throws IOException {
+  public void CrearPagare(int numeroDiasMenos) throws IOException {
     Response response =
         given()
         .contentType("application/json")
         .accept("application/json")
-        .body(CrearPagareBody()).
+        .body(CrearPagareBody(numeroDiasMenos)).
     when()
         .post(ServicePaths.pathDeceval_crearpagare()).
     then()
@@ -149,17 +139,13 @@ public class DecevalRequest {
     numeroPagareDeceval = response.path("mensajesSalida.numPagareDeceval");
   }
 
-  public void FirmarPagare() throws IOException {
+  public void FirmarPagare(int numeroDiasMenos) throws IOException {
     given()
         .contentType("application/json")
         .accept("application/json")
-        .body(FirmaPagareBody())
-        .when().post(ServicePaths.pathDeceval_crearpagare());
+        .body(FirmaPagareBody(numeroDiasMenos))
+        .when().post(ServicePaths.pathDeceval_firmarpagare());
   }
-
-
-
-
 
 
 }
