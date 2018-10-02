@@ -2,7 +2,7 @@ package co.com.ath.automation.rest.data;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:${env}.properties"})
+@Config.Sources({"classpath:staging.properties"})
 
 public interface Environment extends Config {
 

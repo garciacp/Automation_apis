@@ -8,16 +8,16 @@ import net.serenitybdd.rest.SerenityRest;
 public class DecevalAssertion {
 
 
-    public static void Consultaaprobada() {
-      assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida.codigoPagare"), equalTo("SDL.SE.0000"));
+    public static void Consultaaprobada(String codigo) {
+      assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo), equalTo("SDL.SE.0000"));
     }
 
-  public static void Consultarechazada() {
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida.codigoPagare"), equalTo("SDL.SE.0000"));
+  public static void Consultarechazada(String codigo) {
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo), equalTo("SDL.SE.0000"));
   }
 
-  public static void approvedAssertionGirator() {
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida.codigoGirador"), equalTo("SDLSE.0000"));
+  public static void approvedAssertionGirator(String codigo) {
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo), equalTo("SDL.SE.0000"));
   }
 
   public static void AssertionCuentaotorgante() {

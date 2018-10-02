@@ -1,7 +1,7 @@
 {
 
   "fechahoy": "2018-09-25T00:00:00",
-  "numeroDocumento": "79577777",
+  "numeroDocumento": "79577000",
   "tipoDocumento": "1",
   "codigoDepositante": "274",
   "usuario": "86003582751",
@@ -10,7 +10,7 @@
   "idClaseDefinicionDocumento": "284",
   "fechaGrabacionPagare": "2018-10-01T00:00:00",
   "tipoPagare": "2",
-  "numPagareEntidad": "2018-09-04_P69",
+  "numPagareEntidad": "2018-10-01_P100",
   "fechaDesembolsoPagare": "2018-10-01T00:00:00",
   "otorganteCuenta": "69994",
   "creditoReembolsableEn": "2",

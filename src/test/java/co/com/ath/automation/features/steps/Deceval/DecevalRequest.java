@@ -3,6 +3,7 @@ package co.com.ath.automation.features.steps.Deceval;
 import static net.serenitybdd.rest.SerenityRest.given;
 
 import co.com.ath.automation.rest.apis.ServicePaths;
+import co.com.ath.automation.utils.FunctionsUtils;
 import io.restassured.response.Response;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -11,7 +12,9 @@ import org.json.JSONObject;
 
 public class DecevalRequest {
 
-  public String cuentaOtorgante;
+  private static String cuentaOtorgante;
+  private static String numeroPagareDeceval;
+  public FunctionsUtils functionsUtils = new FunctionsUtils();
 
   public String CrearOtorganteBody() {
     try {
@@ -21,7 +24,7 @@ public class DecevalRequest {
       );
 
       JSONObject jObject  = new JSONObject(CrearGiradorBody);
-      jObject.put("fechahoy","2018-10-01T00:00:00");
+      jObject.put("fechahoy",functionsUtils.getDateToday());
 
       String CrearGiradorBodyModify =   jObject.toString();
       return CrearGiradorBodyModify;
@@ -34,18 +37,17 @@ public class DecevalRequest {
   public String CrearPagareBody() {
 
     try {
-      String CrearPagareBody = IOUtils.toString(
+      String crearPagareBody = IOUtils.toString(
           this.getClass().getClassLoader().getResourceAsStream("json/Deceval_CrearPagare.json"),
           StandardCharsets.UTF_8
       );
 
-      JSONObject jObject  = new JSONObject(CrearPagareBody);
-      jObject.put("fechahoy","2018-10-01T00:00:00");
+      JSONObject jObject  = new JSONObject(crearPagareBody);
+      jObject.put("fechahoy",functionsUtils.getDateToday());
       jObject.put("otorganteCuenta", cuentaOtorgante);
-
-
-      String CrearPagareBodyModify =   jObject.toString();
-      return CrearPagareBodyModify;
+      jObject.put("numPagareEntidad", functionsUtils.getNamePagare());
+      String crearPagareBodyModify =   jObject.toString();
+      return crearPagareBodyModify;
 
     } catch (IOException e) {
       throw new RuntimeException("Error reading file");
@@ -55,11 +57,15 @@ public class DecevalRequest {
   public String FirmaPagareBody() {
 
     try {
-      String FirmaPagareBody = IOUtils.toString(
+      String firmaPagareBody = IOUtils.toString(
           this.getClass().getClassLoader().getResourceAsStream("json/Deceval_FirmaPagare.json"),
           StandardCharsets.UTF_8
       );
-      return FirmaPagareBody;
+
+      JSONObject jObject  = new JSONObject(firmaPagareBody);
+      jObject.put("fechahoy",functionsUtils.getDateToday());
+      jObject.put("idPagare", numeroPagareDeceval);
+      return jObject.toString();
 
     } catch (IOException e) {
       throw new RuntimeException("Error reading file");
@@ -115,11 +121,16 @@ public class DecevalRequest {
 
 
   public void CrearOtorgante() throws IOException {
-    given()
+
+    Response response =
+            given()
         .contentType("application/json")
         .accept("application/json")
         .body(CrearOtorganteBody())
-        .when().post(ServicePaths.pathDeceval_crearotorgante());
+        .when().post(ServicePaths.pathDeceval_crearotorgante())
+        .then().contentType("application/json")
+        .extract().response();
+        cuentaOtorgante = response.path("mensajesSalida.cuentaotorgante");
   }
 
 
@@ -135,8 +146,7 @@ public class DecevalRequest {
         .contentType("application/json").
     extract()
         .response();
-
-    cuentaOtorgante = response.path("cuentaotorgante");
+    numeroPagareDeceval = response.path("mensajesSalida.numPagareDeceval");
   }
 
   public void FirmarPagare() throws IOException {

@@ -9,11 +9,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.commons.io.IOUtils;
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
 
 public class AuthenticationRequests {
 
     private static Environment environment;
+
+    final static Logger logger = Logger.getLogger(AuthenticationRequests.class);
 
     static {
         environment = ConfigFactory.create(Environment.class);
@@ -44,7 +47,7 @@ public class AuthenticationRequests {
     public void Authentication(int IdentSerialNum, String bankid, String body) throws IOException {
         Random numeroRandom = new Random();
         int XRqUID = numeroRandom.nextInt(999999-100000+1) + 100000;
-
+        System.out.print("**** Autenticacion *** "+ServicePaths.pathAuthentication());
         given()
             .contentType("application/json")
             .header("X-RqUID", XRqUID).relaxedHTTPSValidation()
