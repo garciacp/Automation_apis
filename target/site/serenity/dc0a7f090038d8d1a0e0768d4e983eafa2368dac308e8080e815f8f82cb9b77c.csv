@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Firma Pagare Deceval","usuario nuevo crea otorgante","SUCCESS","11:48:36","0.0","2.2"
+"Firma Pagare Deceval","usuario crea nuevo otorgante con fecha hoy incorrecta","SUCCESS","11:49:12","0.0","2.12"
+"Firma Pagare Deceval","usuario envia creacion otorgante sin numero documento","SUCCESS","11:49:14","0.0","8.82"

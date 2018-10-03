@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="co.com.ath.automation.features.Runner" time="2.812" tests="5" errors="0" skipped="4" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="co.com.ath.automation.features.Runner" time="76.597" tests="53" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2018.2.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="cucumber.options" value="--tags @pruebasDeceval"/>
+    <property name="cucumber.options" value="--tags @Deceval"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.181-b13"/>
     <property name="gopherProxySet" value="false"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/6B548DDE-A662-44A5-AEB2-E14C39BD866E/d/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/A175E5A2-ECE7-4FEA-96E2-D7EEAD1631E2/d/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/daniel.martin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -42,11 +42,11 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="daniel.martin"/>
-    <property name="java.class.path" value="/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/6B548DDE-A662-44A5-AEB2-E14C39BD866E/d/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.5.2.jar:/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/6B548DDE-A662-44A5-AEB2-E14C39BD866E/d/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar"/>
+    <property name="java.class.path" value="/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/A175E5A2-ECE7-4FEA-96E2-D7EEAD1631E2/d/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.5.2.jar:/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/A175E5A2-ECE7-4FEA-96E2-D7EEAD1631E2/d/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.2.4 clean verify -Deny=staging -Dcucumber.options=--tags @pruebasDeceval"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.2.4 clean verify -Deny=staging -Dcucumber.options=--tags @Deceval"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -55,7 +55,7 @@
     <property name="java.ext.dirs" value="/Users/daniel.martin/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/6B548DDE-A662-44A5-AEB2-E14C39BD866E/d/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="maven.home" value="/private/var/folders/n1/rycyvygx43lbkq4hb1fxf5z4m73slv/T/AppTranslocation/A175E5A2-ECE7-4FEA-96E2-D7EEAD1631E2/d/IntelliJ IDEA CE.app/Contents/plugins/maven/lib/maven3"/>
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -64,153 +64,57 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Given usuario envia solicitud de consulta pagare sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0">
-    <skipped/>
-    <system-out><![CDATA[17:36:55.528 [main] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM /Users/daniel.martin/Documents/git/test/automatizacion/App/Automation_apis/serenity.properties 
-17:36:55.532 [main] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM /Users/daniel.martin/Documents/git/test/automatizacion/App/Automation_apis/serenity.properties 
-17:36:55.532 [main] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - LOADING LOCAL PROPERTIES FROM /Users/daniel.martin/Documents/git/test/automatizacion/App/Automation_apis/serenity.properties 
-17:36:55.533 [main] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - serenity.logging=VERBOSE
-17:36:55.534 [main] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - enable.markdown=story,narrative,scenario,step
-Setting runtime options in createRuntime()
-17:36:55.901 [main] INFO net.serenitybdd.core.Serenity - 
-
--------------------------------------------------------------------------------------
-     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
-    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
-   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
-    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
-.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
-|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
--------------------------------------------------------------------------------------
-
-17:36:55.901 [main] DEBUG net.thucydides.core.steps.StepEventBus - Test suite started for story net.thucydides.core.model.Story@9a79cbad
-17:36:55.903 [main] INFO net.serenitybdd.core.Serenity - Test Suite Started: Firma Pagare Deceval
-17:36:56.014 [main] INFO net.serenitybdd.core.Serenity - 
- _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
-|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
-  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
-  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
-  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
-                                                                  
-
-TEST STARTED: usuario envia solicitud de consulta sin algun campo obligatorio
--------------------------------------------------------------------(firma-pagare-deceval;usuario-envia-solicitud-de-consulta-sin-algun-campo-obligatorio)
-]]></system-out>
-  </testcase>
-  <testcase name="When usuario envia solicitud de consulta pagare sin campo pagare" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0">
-    <skipped/>
-    <system-out><![CDATA[17:36:56.096 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Given usuario envia solicitud de consulta pagare sin algun campo obligatorio
-17:36:56.097 [main] INFO net.serenitybdd.core.Serenity - TEST PENDING
-17:36:56.099 [main] INFO net.serenitybdd.core.Serenity - PENDING STEP
-]]></system-out>
-  </testcase>
-  <testcase name="Then la solicitud es rechazada indicando el error en el header" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0">
-    <skipped/>
-    <system-out><![CDATA[17:36:56.100 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP When usuario envia solicitud de consulta pagare sin campo pagare
-17:36:56.100 [main] INFO net.serenitybdd.core.Serenity - TEST PENDING
-17:36:56.100 [main] INFO net.serenitybdd.core.Serenity - PENDING STEP
-17:36:56.102 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Then la solicitud es rechazada indicando el error en el header
-]]></system-out>
-  </testcase>
-  <testcase name="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0">
-    <skipped/>
-    <system-out><![CDATA[17:36:56.103 [main] INFO net.serenitybdd.core.Serenity - IGNORING STEP
-17:36:56.104 [main] INFO net.serenitybdd.core.Serenity - 
-          __  _____ _____ ____ _____   ____  _____ _   _ ____ ___ _   _  ____ 
- _       / / |_   _| ____/ ___|_   _| |  _ \| ____| \ | |  _ \_ _| \ | |/ ___|
-(_)____ / /    | | |  _| \___ \ | |   | |_) |  _| |  \| | | | | ||  \| | |  _ 
- |_____/ /     | | | |___ ___) || |   |  __/| |___| |\  | |_| | || |\  | |_| |
-(_)   /_/      |_| |_____|____/ |_|   |_|   |_____|_| \_|____/___|_| \_|\____|
-                                                                                
-
-TEST PENDING: usuario envia solicitud de consulta sin algun campo obligatorio
----------------------------------------------------------------------------------
-17:36:56.106 [main] DEBUG net.thucydides.core.reports.ReportService - Reporting formats: [JSON, HTML]
-17:36:56.109 [main] DEBUG net.thucydides.core.reports.ReportService - Found reporter: net.thucydides.core.reports.xml.XMLTestOutcomeReporter@2f7a7219(format = Optional.of(XML))
-17:36:56.110 [main] DEBUG net.thucydides.core.reports.ReportService - Found reporter: net.thucydides.core.reports.json.JSONTestOutcomeReporter@669513d8(format = Optional.of(JSON))
-17:36:56.110 [main] DEBUG net.thucydides.core.reports.ReportService - Registering reporter: net.thucydides.core.reports.json.JSONTestOutcomeReporter@669513d8
-17:36:56.215 [main] DEBUG net.thucydides.core.reports.ReportService - Found reporter: net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@4263b080(format = Optional.of(HTML))
-17:36:56.215 [main] DEBUG net.thucydides.core.reports.ReportService - Registering reporter: net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@4263b080
-17:36:56.303 [main] DEBUG net.thucydides.core.reports.ReportService - Generating reports for 1 test outcomes using: net.thucydides.core.reports.json.JSONTestOutcomeReporter@669513d8
-17:36:56.304 [main] DEBUG net.thucydides.core.reports.junit.JUnitXMLOutcomeReporter - GENERATING JUNIT REPORTS
-17:36:56.304 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Firma Pagare Deceval:usuario envia solicitud de consulta sin algun campo obligatorio
-17:36:56.304 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - net.thucydides.core.reports.json.JSONTestOutcomeReporter@669513d8: Generating report for test outcome: Firma Pagare Deceval:usuario envia solicitud de consulta sin algun campo obligatorio
-17:36:56.313 [pool-1-thread-1] INFO net.thucydides.core.reports.json.JSONTestOutcomeReporter - Generating JSON report for usuario envia solicitud de consulta sin algun campo obligatorio to file /Users/daniel.martin/Documents/git/test/automatizacion/App/Automation_apis/target/site/serenity/9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.json (using temp file /Users/daniel.martin/Documents/git/test/automatizacion/App/Automation_apis/target/site/serenity/9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.jsonb3c0e7d9-bed1-45a1-8989-2e2fa522bb93)
-17:36:56.400 [main] DEBUG net.thucydides.core.reports.junit.JUnitXMLOutcomeReporter - GENERATING JUNIT REPORT SERENITY-JUNIT-9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.xml using temporary file target/site/serenity/SERENITY-JUNIT-9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.xml10c21de5-8c3b-45c9-ab0a-2090a27f61a9
-17:36:56.500 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Firma Pagare Deceval:usuario envia solicitud de consulta sin algun campo obligatorio done
-17:36:56.640 [main] DEBUG net.thucydides.core.reports.ReportService - Shutting down executor service
-17:36:56.641 [main] DEBUG net.thucydides.core.reports.ReportService - Reports generated in: 338 ms
-17:36:56.641 [main] DEBUG net.thucydides.core.reports.ReportService - Generating reports for 1 test outcomes using: net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@4263b080
-17:36:56.641 [main] DEBUG net.thucydides.core.reports.junit.JUnitXMLOutcomeReporter - GENERATING JUNIT REPORTS
-17:36:56.641 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Firma Pagare Deceval:usuario envia solicitud de consulta sin algun campo obligatorio
-17:36:56.641 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@4263b080: Generating report for test outcome: Firma Pagare Deceval:usuario envia solicitud de consulta sin algun campo obligatorio
-17:36:56.642 [main] DEBUG net.thucydides.core.reports.junit.JUnitXMLOutcomeReporter - GENERATING JUNIT REPORT SERENITY-JUNIT-9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.xml using temporary file target/site/serenity/SERENITY-JUNIT-9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.xml3dacc771-3b5b-4edf-b5b0-40ef7e5f7ba5
-17:36:56.642 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - GENERATE TEST OUTCOME REPORT FOR usuario envia solicitud de consulta sin algun campo obligatorio in 9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491
-17:36:56.662 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.RequirementsTagProvider - Requirements found:[Requirement{name='Autenticacion andes', type='feature' parent = 'null', cardNumber='null'}, Requirement{name='Firma pagare deceval', type='feature' parent = 'null', cardNumber='null'}, Requirement{name='Prueba', type='feature' parent = 'null', cardNumber='null'}, Requirement{name='Servicio de firma onpremise con andes', type='feature' parent = 'null', cardNumber='null'}]
-17:36:56.667 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome usuario envia solicitud de consulta sin algun campo obligatorio-[]: Optional.of(Requirement{name='Firma pagare deceval', type='feature' parent = 'null', cardNumber='null'})
-17:36:56.669 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome usuario envia solicitud de consulta sin algun campo obligatorio-[]: Optional.of(Requirement{name='Firma pagare deceval', type='feature' parent = 'null', cardNumber='null'})
-17:36:56.714 [pool-2-thread-1] INFO net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - GENERATING HTML REPORT FOR Firma Pagare Deceval:usuario envia solicitud de consulta sin algun campo obligatorio in 9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.html in directory target/site/serenity  
-17:36:57.157 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - Generating report in 9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.html
-17:36:57.177 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/default.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.178 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/default_en_GB.ftl"): Not found
-17:36:57.180 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/default_en.ftl"): Not found
-17:36:57.181 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/default.ftl"): Found
-17:36:57.181 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/default.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/default.ftl"
-17:36:57.438 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/favicon.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.438 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/favicon_en_GB.ftl"): Not found
-17:36:57.439 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/favicon_en.ftl"): Not found
-17:36:57.439 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/favicon.ftl"): Found
-17:36:57.439 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/favicon.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/favicon.ftl"
-17:36:57.441 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/common.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.442 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/common_en_GB.ftl"): Not found
-17:36:57.444 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/common_en.ftl"): Not found
-17:36:57.444 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/common.ftl"): Found
-17:36:57.445 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/common.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/common.ftl"
-17:36:57.447 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/font-awesome.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.448 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/font-awesome_en_GB.ftl"): Not found
-17:36:57.449 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/font-awesome_en.ftl"): Not found
-17:36:57.450 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/font-awesome.ftl"): Found
-17:36:57.450 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/font-awesome.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/font-awesome.ftl"
-17:36:57.451 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/jquery.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.451 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/jquery_en_GB.ftl"): Not found
-17:36:57.452 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/jquery_en.ftl"): Not found
-17:36:57.452 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/jquery.ftl"): Found
-17:36:57.452 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/jquery.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/jquery.ftl"
-17:36:57.453 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/bootstrap.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.454 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/bootstrap_en_GB.ftl"): Not found
-17:36:57.455 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/bootstrap_en.ftl"): Not found
-17:36:57.456 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/bootstrap.ftl"): Found
-17:36:57.456 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/bootstrap.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/bootstrap.ftl"
-17:36:57.457 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/css.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.458 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/css_en_GB.ftl"): Not found
-17:36:57.460 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/css_en.ftl"): Not found
-17:36:57.462 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/css.ftl"): Found
-17:36:57.463 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/css.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/css.ftl"
-17:36:57.466 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/jquery-ui.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.467 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/jquery-ui_en_GB.ftl"): Not found
-17:36:57.468 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/jquery-ui_en.ftl"): Not found
-17:36:57.469 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/jquery-ui.ftl"): Found
-17:36:57.470 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/jquery-ui.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/jquery-ui.ftl"
-17:36:57.471 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/datatables.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.472 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/datatables_en_GB.ftl"): Not found
-17:36:57.473 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/datatables_en.ftl"): Not found
-17:36:57.474 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/datatables.ftl"): Found
-17:36:57.474 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/datatables.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/datatables.ftl"
-17:36:57.475 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/libraries/imgpreview.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.475 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/imgpreview_en_GB.ftl"): Not found
-17:36:57.476 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/imgpreview_en.ftl"): Not found
-17:36:57.476 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/libraries/imgpreview.ftl"): Found
-17:36:57.476 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/libraries/imgpreview.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/libraries/imgpreview.ftl"
-17:36:57.593 [pool-2-thread-1] DEBUG freemarker.cache - Couldn't find template in cache for "freemarker/menu.ftl"("en_GB", US-ASCII, parsed); will try to load it.
-17:36:57.594 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/menu_en_GB.ftl"): Not found
-17:36:57.594 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/menu_en.ftl"): Not found
-17:36:57.594 [pool-2-thread-1] DEBUG freemarker.cache - TemplateLoader.findTemplateSource("freemarker/menu.ftl"): Found
-17:36:57.594 [pool-2-thread-1] DEBUG freemarker.cache - Loading template for "freemarker/menu.ftl"("en_GB", US-ASCII, parsed) from "jar:file:/Users/daniel.martin/.m2/repository/net/serenity-bdd/serenity-report-resources/1.5.9/serenity-report-resources-1.5.9.jar!/freemarker/menu.ftl"
-17:36:57.699 [pool-2-thread-1] DEBUG net.thucydides.core.reports.html.HtmlAcceptanceTestReporter - Generated report 9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.html in 542 ms
-17:36:57.699 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Firma Pagare Deceval:usuario envia solicitud de consulta sin algun campo obligatorio done
-17:36:57.699 [main] DEBUG net.thucydides.core.reports.ReportService - Shutting down executor service
-17:36:57.700 [main] DEBUG net.thucydides.core.reports.ReportService - Reports generated in: 1059 ms
-]]></system-out>
-  </testcase>
-  <testcase name="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="1.866"/>
+  <testcase name="Given usuario Nuevo solicita consulta pagare sin pdf" classname="Scenario: Consulta de pagare en deceval sin pdf" time="0.001"/>
+  <testcase name="When envia la peticion de consulta sin pdf a deceval" classname="Scenario: Consulta de pagare en deceval sin pdf" time="0"/>
+  <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: Consulta de pagare en deceval sin pdf" time="0"/>
+  <testcase name="Scenario: Consulta de pagare en deceval sin pdf" classname="Scenario: Consulta de pagare en deceval sin pdf" time="1.433"/>
+  <testcase name="Given usuario Nuevo solicita consulta pagare con pdf" classname="Scenario: Consulta de pagare en deceval con pdf" time="0"/>
+  <testcase name="When envia la peticion de consulta con pdf a  deceval" classname="Scenario: Consulta de pagare en deceval con pdf" time="0"/>
+  <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: Consulta de pagare en deceval con pdf" time="0"/>
+  <testcase name="Scenario: Consulta de pagare en deceval con pdf" classname="Scenario: Consulta de pagare en deceval con pdf" time="0.069"/>
+  <testcase name="Given usuario Nuevo solicita crear otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0.001"/>
+  <testcase name="When envia la peticion para crear otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0"/>
+  <testcase name="Then la consulta debe ser aprobada otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0"/>
+  <testcase name="And el cliente ya existe" classname="Scenario: usuario nuevo crea otorgante" time="0"/>
+  <testcase name="Scenario: usuario nuevo crea otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0.064"/>
+  <testcase name="Given usuario Nuevo solicita crear pagare" classname="Scenario: usuario nuevo crea pagare" time="0"/>
+  <testcase name="When envia la peticion para crear pagare" classname="Scenario: usuario nuevo crea pagare" time="0"/>
+  <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: usuario nuevo crea pagare" time="0"/>
+  <testcase name="Scenario: usuario nuevo crea pagare" classname="Scenario: usuario nuevo crea pagare" time="0.048"/>
+  <testcase name="Given usuario Nuevo solicita firmar pagare" classname="Scenario: usuario nuevo Firma pagare" time="0"/>
+  <testcase name="When envia la peticion para firmar pagare" classname="Scenario: usuario nuevo Firma pagare" time="0"/>
+  <testcase name="Then la firma debe ser aprobada" classname="Scenario: usuario nuevo Firma pagare" time="0"/>
+  <testcase name="Scenario: usuario nuevo Firma pagare" classname="Scenario: usuario nuevo Firma pagare" time="0.04"/>
+  <testcase name="Given usuario solicita crear nuevo otorgante con fecha hoy incorrecta" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0"/>
+  <testcase name="When usuario envia solicitud crear nuevo otorgante" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0"/>
+  <testcase name="Then la solicitud es rechazada por fecha incorrecta" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0"/>
+  <testcase name="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0.067"/>
+  <testcase name="Given usuario envia creacion otorgante sin algun campo obligatorio" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0.001"/>
+  <testcase name="When usuario envia solicitud crear nuevo otorgante sin algun campo obligatorio" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0"/>
+  <testcase name="Then la solicitud es rechazada indicando el error en el header" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0"/>
+  <testcase name="Scenario: usuario envia creacion otorgante sin numero documento" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0.054"/>
+  <testcase name="Given usuario envia solicitud consulta pagare con pdf con id inexistente" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0"/>
+  <testcase name="When usuario envia solicitud consulta pagare con pdf" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0"/>
+  <testcase name="Then el servicio debe responder no existe id pagare" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0"/>
+  <testcase name="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0.075"/>
+  <testcase name="Given usuario envia solicitud de consulta con fecha hoy" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0"/>
+  <testcase name="When usuario envia solicitud consulta pagare con pdf con fecha hoy incorrecta" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0"/>
+  <testcase name="Then el servicio debe responder error en fecha hoy" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0"/>
+  <testcase name="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0.055"/>
+  <testcase name="Given usuario envia solicitud de consulta pagare sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0"/>
+  <testcase name="When usuario envia solicitud de consulta pagare sin campo pagare" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0"/>
+  <testcase name="Then la solicitud es rechazada indicando pagare requerido" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0"/>
+  <testcase name="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0.068"/>
+  <testcase name="Given el usuario solicita crear pagare sin cuenta otorgante" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0"/>
+  <testcase name="When el usuario envia la peticion para crear pagare sin cuenta otorgante" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0"/>
+  <testcase name="Then el pagare debe ser creado si se envia numero de documento" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0"/>
+  <testcase name="Scenario: usuario solicita crear pagare sin cuenta otorgante" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0.044"/>
+  <testcase name="Given el usuario solicita crear pagare sin numero pagare" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0"/>
+  <testcase name="When envia la peticion crear pagare sin numero pagare" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0"/>
+  <testcase name="Then el servicio debe generar error en la creacion de pagare" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0"/>
+  <testcase name="Scenario: usuario solicita crear pagare sin numero pagare entidad" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0.062"/>
+  <testcase name="Given el usuario solicita firmar pagare con id inexistente" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0"/>
+  <testcase name="When envia la peticion firmar pagare con id" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0"/>
+  <testcase name="Then el servicio debe generar error id pagare no existe" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0"/>
+  <testcase name="Scenario: usuario solicita firmar pagare con id pagare" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0.072"/>
 </testsuite>

@@ -26,27 +26,21 @@ public class DecevalRequest {
 
   }
 
-  public String CrearPagareBody(int numeroDiasMenos) {
+  public String CrearPagareBody(int numeroDiasMenos, String eliminarCampo, String nodoAEliminar) {
 
-    try {
-      String crearPagareBody = IOUtils.toString(
-          this.getClass().getClassLoader().getResourceAsStream("json/Deceval_CrearPagare.json"),
-          StandardCharsets.UTF_8
-      );
-
-      JSONObject jObject  = new JSONObject(crearPagareBody);
+      JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CrearPagare.json", nodoAEliminar);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
       jObject.put("otorganteCuenta", cuentaOtorgante);
-      jObject.put("numPagareEntidad", functionsUtils.getNamePagare());
+      if(eliminarCampo==null){
+        jObject.put("numPagareEntidad", functionsUtils.getNamePagare());
+      }
+
       String crearPagareBodyModify =   jObject.toString();
       return crearPagareBodyModify;
 
-    } catch (IOException e) {
-      throw new RuntimeException("Error reading file");
-    }
   }
 
-  public String FirmaPagareBody(int numeroDiasMenos) {
+  public String FirmaPagareBody(int numeroDiasMenos, String numeroPagare) {
 
     try {
       String firmaPagareBody = IOUtils.toString(
@@ -56,7 +50,12 @@ public class DecevalRequest {
 
       JSONObject jObject  = new JSONObject(firmaPagareBody);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
-      jObject.put("idPagare", numeroPagareDeceval);
+      if(numeroPagare == null){
+          jObject.put("idPagare", numeroPagareDeceval);
+      }else{
+          jObject.put("idPagare", numeroPagare);
+      }
+
       return jObject.toString();
 
     } catch (IOException e) {
@@ -124,12 +123,12 @@ public class DecevalRequest {
   }
 
 
-  public void CrearPagare(int numeroDiasMenos) throws IOException {
+  public void CrearPagare(int numeroDiasMenos, String eliminarCampo, String nodoAEliminar) throws IOException {
     Response response =
         given()
         .contentType("application/json")
         .accept("application/json")
-        .body(CrearPagareBody(numeroDiasMenos)).
+        .body(CrearPagareBody(numeroDiasMenos, eliminarCampo, nodoAEliminar)).
     when()
         .post(ServicePaths.pathDeceval_crearpagare()).
     then()
@@ -139,11 +138,11 @@ public class DecevalRequest {
     numeroPagareDeceval = response.path("mensajesSalida.numPagareDeceval");
   }
 
-  public void FirmarPagare(int numeroDiasMenos) throws IOException {
+  public void FirmarPagare(int numeroDiasMenos, String numeroPagare) throws IOException {
     given()
         .contentType("application/json")
         .accept("application/json")
-        .body(FirmaPagareBody(numeroDiasMenos))
+        .body(FirmaPagareBody(numeroDiasMenos,numeroPagare))
         .when().post(ServicePaths.pathDeceval_firmarpagare());
   }
 

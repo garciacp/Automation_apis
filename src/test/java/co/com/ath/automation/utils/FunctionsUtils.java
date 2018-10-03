@@ -30,7 +30,7 @@ public class FunctionsUtils {
         return name;
     }
 
-    public JSONObject getJsonFinal(String eliminarCampo, String path, int posicion){
+    public JSONObject getJsonFinal(String eliminarCampo, String path, String nodoAEliminar){
         try {
             String jsonBody = IOUtils.toString(
                     this.getClass().getClassLoader().getResourceAsStream(path),
@@ -38,14 +38,13 @@ public class FunctionsUtils {
             );
 
             JSONObject jObject  = new JSONObject(jsonBody);
-            int sizeJsonObject = jObject.length();
-            int numObjectDelte = (int) (Math.random() * sizeJsonObject);
             if(eliminarCampo!=null && eliminarCampo.equals("S")){
                 JSONArray names = jObject.names();
                 if (names == null) return null;
                 for (int i = 0; i < names.length(); ++i) {
                     String key = names.getString(i);
-                    if (i == posicion) {
+                    System.out.print("Valor key "+key);
+                    if (key.equals(nodoAEliminar)) {
                         jObject.remove(key);
                     }
                 }
@@ -55,5 +54,6 @@ public class FunctionsUtils {
             throw new RuntimeException("Error reading file");
         }
     }
+
 
 }

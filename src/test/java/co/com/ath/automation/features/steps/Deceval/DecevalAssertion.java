@@ -1,6 +1,7 @@
 package co.com.ath.automation.features.steps.Deceval;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import net.serenitybdd.rest.SerenityRest;
@@ -13,7 +14,7 @@ public class DecevalAssertion {
     }
 
   public static void Consultarechazada(String codigo) {
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo),  equalTo("SDL.SE.0000"));
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo),  not(equalTo("SDL.SE.0000")));
   }
 
   public static void approvedAssertionGirator(String codigo) {
@@ -34,7 +35,9 @@ public class DecevalAssertion {
     public static void assertionCrearOtorganteRechazada(String codigo) {
         assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo),  equalTo("SDL.SE.0098"));
     }
-    public static void assertionConsultaPdfRechazada(String codigo) {
-        assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo),  equalTo("0001"));
+    public static void assertionConsultaPdfRechazada(String codigo, String valor) {
+        assertThat(SerenityRest.then().extract().body().jsonPath().get("mensajesSalida."+codigo),  equalTo(valor));
     }
+
+
 }

@@ -4,7 +4,7 @@ Feature: Firma Pagare Deceval
     Scenario: Consulta de pagare en deceval sin pdf
       Given usuario Nuevo solicita consulta pagare sin pdf
       When envia la peticion de consulta sin pdf a deceval
-      Then la consulta debe ser rechazada
+      Then la consulta debe ser aprobada pagare
 
 
   @Deceval @ConsultaPagare
@@ -59,35 +59,30 @@ Feature: Firma Pagare Deceval
         When usuario envia solicitud consulta pagare con pdf con fecha hoy incorrecta
         Then el servicio debe responder error en fecha hoy
 
-  @Deceval @ConsultaPagare @pruebasDeceval
+  @Deceval @ConsultaPagare
     Scenario: usuario envia solicitud de consulta sin algun campo obligatorio
           Given usuario envia solicitud de consulta pagare sin algun campo obligatorio
           When usuario envia solicitud de consulta pagare sin campo pagare
-          Then la solicitud es rechazada indicando el error en el header
+          Then la solicitud es rechazada indicando pagare requerido
 
   #Historias de usuario crear pagare
   @Deceval @Crearpagare
     Scenario: usuario solicita crear pagare sin cuenta otorgante
-        Given usuario solicita crear pagare sin cuenta otorgante
-        When envia la peticion para crear pagare
-        Then el servicio debe generar error en la creacion de pagare
+        Given el usuario solicita crear pagare sin cuenta otorgante
+        When el usuario envia la peticion para crear pagare sin cuenta otorgante
+        Then el pagare debe ser creado si se envia numero de documento
 
   @Deceval @Crearpagare
     Scenario: usuario solicita crear pagare sin numero pagare entidad
-        Given usuario solicita crear pagare sin numero pagare entidad
-        When envia la peticion para crear pagare
+        Given el usuario solicita crear pagare sin numero pagare
+        When envia la peticion crear pagare sin numero pagare
         Then el servicio debe generar error en la creacion de pagare
 
-  @Deceval @Crearpagare
-    Scenario: usuario solicita crear pagare sin algun campo obligatorio
-        Given usuario solicita crear pagare sin algun campo obligatorio
-        When envia la peticion para crear pagare
-        Then el servicio debe generar error en la creacion de pagare
 
   #Historias de usuario firmas pagare
-  @Deceval @Firmarpagare
-    Scenario: usuario solicita firmar pagare con id pagare diferente
-        Given usuario solicita firmar pagare con id diferente
-        When envia la peticion para firmar pagare
-        Then el servicio debe generar error en la firma del pagare
+  @Deceval @Firmarpagare @pruebasDeceval
+    Scenario: usuario solicita firmar pagare con id pagare inexistente
+        Given el usuario solicita firmar pagare con id inexistente
+        When envia la peticion firmar pagare con id
+        Then el servicio debe generar error id pagare no existe
 

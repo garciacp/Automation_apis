@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Firma Pagare Deceval","usuario nuevo crea pagare","SUCCESS","11:48:38","0.0","5.3"
+"Firma Pagare Deceval","usuario solicita crear pagare sin cuenta otorgante","SUCCESS","11:49:29","0.0","1.58"
+"Firma Pagare Deceval","usuario solicita crear pagare sin numero pagare entidad","SUCCESS","11:49:31","0.0","1.4"

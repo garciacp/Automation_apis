@@ -9,6 +9,12 @@ public class DecevalStaticCode {
     public static final String COD_ELIMINAR_NODO = "S";
     public static int NUMERO_DIAS_MAS = 1;
     public static int NUMER_DIAS_IGUAL = 0;
-    public static int CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO = 7;
-    public static int CONSULTA_PAGARE_POSICION_NUM_PAGARE = 2;
+    public static final String CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO = "numeroDocumento";
+    public static final String CREAR_PAGARE_POSICION_CUENTA_OTORGANTE = "otorganteCuenta";
+    public static final String CONSULTA_PAGARE_POSICION_NUM_PAGARE = "numPagareEntidad";
+    public static final String COD_RSPTA_CONSULTA_RECHAZADA = "SDL.SE.0098";
+    public static final String COD_RSPTA_NO_EXISTE_INFO = "SDL.SE.0118";
+    public static final String COD_RSPTA_CONSULTA_PAGARE_REQUERIDO = "0002";
+    public static final String COD_RSPTA_ERROR = "0001";
+    public static final String CREAR_PAGARE_POSICION_NUM_PAGARE_ENTIDAD = "numPagareEntidad";
 }

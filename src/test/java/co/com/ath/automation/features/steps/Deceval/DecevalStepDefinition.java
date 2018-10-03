@@ -52,16 +52,14 @@ public class DecevalStepDefinition {
     Request.ConsultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,null, null);
   }
 
-
-
   @When("^envia la peticion para crear pagare")
   public void envia_la_peticion_para_crear_pagare() throws Throwable {
-    Request.CrearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL);
+    Request.CrearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null, "");
   }
 
   @When("^envia la peticion para firmar pagare")
   public void envia_la_peticion_para_firmar_pagare() throws Throwable {
-    Request.FirmarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL);
+    Request.FirmarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null);
   }
 
   @Then("^la consulta debe ser aprobada otorgante")
@@ -138,7 +136,7 @@ public class DecevalStepDefinition {
   @Then("^el servicio debe responder no existe id pagare$")
   public void el_servicio_debe_responder_no_existe_id_pagare() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE, DecevalStaticCode.COD_RSPTA_NO_EXISTE_INFO);
   }
 
 
@@ -160,8 +158,84 @@ public class DecevalStepDefinition {
   @Then("^el servicio debe responder error en fecha hoy$")
   public void el_servicio_debe_responder_error_en_fecha_hoy() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE, DecevalStaticCode.COD_RSPTA_CONSULTA_RECHAZADA);
   }
+
+  /**
+   * usuario envia solicitud de consulta sin algun campo obligatorio
+   * @throws Throwable
+   */
+  @Given("^usuario envia solicitud de consulta pagare sin algun campo obligatorio$")
+  public void usuario_envia_solicitud_de_consulta_pagare_sin_algun_campo_obligatorio() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^usuario envia solicitud de consulta pagare sin campo pagare$")
+  public void usuario_envia_solicitud_de_consulta_pagare_sin_campo_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    Request.ConsultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,null,DecevalStaticCode.COD_ELIMINAR_NODO);
+  }
+
+  @Then("^la solicitud es rechazada indicando pagare requerido$")
+  public void la_solicitud_es_rechazada_indicando_pagare_requerido() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE, DecevalStaticCode.COD_RSPTA_CONSULTA_PAGARE_REQUERIDO);
+  }
+
+  @Given("^el usuario solicita crear pagare sin cuenta otorgante$")
+  public void el_usuario_solicita_crear_pagare_sin_cuenta_otorgante() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^el usuario envia la peticion para crear pagare sin cuenta otorgante$")
+  public void el_usuario_envia_la_peticion_para_crear_pagare_sin_cuenta_otorgante() throws Throwable {
+    Request.CrearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,DecevalStaticCode.COD_ELIMINAR_NODO, DecevalStaticCode.CREAR_PAGARE_POSICION_CUENTA_OTORGANTE);
+
+  }
+
+  @Then("^el pagare debe ser creado si se envia numero de documento$")
+  public void el_pagare_debe_creado_si_se_envia_numero_de_documentos() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE,DecevalStaticCode.COD_RSPTA_ERROR);
+  }
+
+
+  @Given("^el usuario solicita crear pagare sin numero pagare$")
+  public void el_usuario_solicita_crear_pagare_sin_numero_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^envia la peticion crear pagare sin numero pagare$")
+  public void envia_la_peticion_crear_pagare_sin_numero_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    Request.CrearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,DecevalStaticCode.COD_ELIMINAR_NODO, DecevalStaticCode.CREAR_PAGARE_POSICION_NUM_PAGARE_ENTIDAD);
+  }
+
+  @Then("^el servicio debe generar error en la creacion de pagare$")
+  public void el_servicio_debe_generar_error_en_la_creacion_de_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.Consultarechazada(DecevalStaticCode.CODE_PAGARE);
+  }
+
+  @Given("^el usuario solicita firmar pagare con id inexistente$")
+  public void el_usuario_solicita_firmar_pagare_con_id_inexistente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^envia la peticion firmar pagare con id$")
+  public void envia_la_peticion_firmar_pagare_con_id() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    Request.FirmarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, "XXXX");
+  }
+
+  @Then("^el servicio debe generar error id pagare no existe$")
+  public void el_servicio_debe_generar_error_id_pagare_no_existe() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.Consultarechazada(DecevalStaticCode.CODE_PAGARE);
+  }
+
+
+
 
 
 
