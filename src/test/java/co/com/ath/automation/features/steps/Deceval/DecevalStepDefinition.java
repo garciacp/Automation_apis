@@ -235,9 +235,24 @@ public class DecevalStepDefinition {
   }
 
 
+  /**
+   * usuario solicita cancelar pagare
+   */
+  @Given("^el usuario solicita cancelar pagare con id existente$")
+  public void el_usuario_solicita_cancelar_pagare_con_id_existente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
 
+  @When("^envia la peticion de cancelar pagare con id existente$")
+  public void envia_la_peticion_de_cancelar_pagare_con_id_existente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    Request.cancelarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, null, null);
+  }
 
-
+  @Then("^el servicio debe respoder con la cancelacion del pagare exitoso$")
+  public void el_servicio_debe_respoder_con_la_cancelacion_del_pagare_exitoso() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
 
 
 

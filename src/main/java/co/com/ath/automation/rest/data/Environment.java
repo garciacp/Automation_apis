@@ -43,6 +43,8 @@ public interface Environment extends Config {
 
   String OtpTypeOccidente();
 
+  String url_cancelarPagareDeceval();
+
   int datoseguro_rojo();
 
   int datoseguro_rojo_verde();

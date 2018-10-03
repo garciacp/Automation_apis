@@ -89,6 +89,13 @@ public class DecevalRequest {
         return jObject.toString();
   }
 
+  public String cancelarPagareBody(int numeroDiasMenos, String numeroId, String eliminarCampo){
+      JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CancelarPagare.json", DecevalStaticCode.CANCELAR_PAGARE_NUM_PAGARE);
+      jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
+      jObject.put(DecevalStaticCode.CANCELAR_PAGARE_NUM_PAGARE, numeroPagareDeceval);
+      return jObject.toString();
+  }
+
 
   public void ConsultaPagareConPdf(int numeroDiasMenos, String numeroId, String eliminarCampo) throws IOException {
 
@@ -145,6 +152,15 @@ public class DecevalRequest {
         .body(FirmaPagareBody(numeroDiasMenos,numeroPagare))
         .when().post(ServicePaths.pathDeceval_firmarpagare());
   }
+
+  public void  cancelarPagare(int numeroDiasMenos, String numeroId, String eliminarCampo) throws IOException {
+      given()
+              .contentType("application/json")
+              .accept("application/json")
+              .body(cancelarPagareBody(numeroDiasMenos,numeroId,eliminarCampo))
+              .when().post(ServicePaths.pathDeceval_cancelarPagare());
+  }
+
 
 
 }

@@ -13,20 +13,20 @@ Feature: Firma Pagare Deceval
       When envia la peticion de consulta con pdf a  deceval
       Then la consulta debe ser aprobada pagare
 
-  @Deceval @CrearOtorgante
+  @Deceval @CrearOtorgante @Basico
     Scenario: usuario nuevo crea otorgante
       Given usuario Nuevo solicita crear otorgante
       When envia la peticion para crear otorgante
       Then la consulta debe ser aprobada otorgante
       And el cliente ya existe
 
-  @Deceval @Crearpagare
+  @Deceval @Crearpagare @Basico
     Scenario: usuario nuevo crea pagare
       Given usuario Nuevo solicita crear pagare
       When envia la peticion para crear pagare
       Then la consulta debe ser aprobada pagare
 
-  @Deceval @Firmarpagare
+  @Deceval @Firmarpagare @Basico
     Scenario: usuario nuevo Firma pagare
       Given usuario Nuevo solicita firmar pagare
       When envia la peticion para firmar pagare
@@ -85,4 +85,12 @@ Feature: Firma Pagare Deceval
         Given el usuario solicita firmar pagare con id inexistente
         When envia la peticion firmar pagare con id
         Then el servicio debe generar error id pagare no existe
+
+
+  #Historias de usuario cancelar pagare
+  @Deceval @CancelarPagare @Basico
+    Scenario: usuario solicita cancelar pagare
+        Given el usuario solicita cancelar pagare con id existente
+        When envia la peticion de cancelar pagare con id existente
+        Then el servicio debe respoder con la cancelacion del pagare exitoso
 
