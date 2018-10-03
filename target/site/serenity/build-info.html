@@ -36,15 +36,15 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var test_results_plot = $.jqplot('test_results_pie_chart', [
             [
-                ['Passing', 1],
+                ['Passing', 0.538462],
                 
                 ['Pending', 0],
                 
                 ['Ignored', 0],
                 
-                ['Failing', 0],
+                ['Failing', 0.153846],
                 
-                ['Errors',  0]
+                ['Errors',  0.307692]
             ]
         ], {
 
@@ -73,25 +73,25 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '13 / 13 tests passed' },
+                {label: '7 / 13 tests passed' },
                 {label: '0 / 13 tests pending'},
                 {label: '0 / 13 tests not executed'},
-                {label: '0 / 13 tests failed'},
-                {label: '0 / 13 errors'}
+                {label: '2 / 13 tests failed'},
+                {label: '4 / 13 errors'}
             ]
         });
 
         var weighted_test_results_plot = $.jqplot('weighted_test_results_pie_chart', [
             [
-                ['Passing', 1],
+                ['Passing', 0.591837],
                 
                 ['Pending', 0],
                 
                 ['Ignored', 0],
                 
-                ['Failing', 0],
+                ['Failing', 0.163265],
                 
-                ['Errors', 0]
+                ['Errors', 0.244898]
             ]
         ], {
 
@@ -121,11 +121,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '13 / 13 tests passed (1% of all test steps)' },
+                {label: '7 / 13 tests passed (0.591837% of all test steps)' },
                 {label: '0 / 13 tests pending'},
                 {label: '0 / 13 tests not executed'},
-                {label: '0 / 13 tests failed (0% of all test steps)'},
-                {label: '0 / 13 errors (0% of all test steps)'}
+                {label: '2 / 13 tests failed (0.163265% of all test steps)'},
+                {label: '4 / 13 errors (0.244898% of all test steps)'}
             ]
         });
 
@@ -189,7 +189,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-10-2018 11:49</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-10-2018 14:50</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>

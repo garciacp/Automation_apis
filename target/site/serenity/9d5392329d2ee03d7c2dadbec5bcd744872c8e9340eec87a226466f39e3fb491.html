@@ -77,7 +77,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-10-2018 11:49</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-10-2018 14:50</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -124,9 +124,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-3x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                    <span class="success-color">
+                                    <span class="error-color">
                                     Usuario Envia Solicitud De Consulta Sin Algun Campo Obligatorio
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -175,75 +175,165 @@
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
                     <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         <a name="1"/>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
-                               style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection1 success-icon"
-                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
-                            </a>
+                            <span style="margin-left: 20px; margin-right: 5px;"
+                                  class="top-level-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
-                               style="display:block;">
                             <span class="top-level-step">When usuario envia solicitud de consulta pagare sin campo pagare</span>
-                            </a>
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">1s</span></td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">0.08s</span></td>
                 </tr>
-                    <tr>
-                    <td colspan="5">
-                    <table id="stepSection1" style="display:none; width:100%">
-
-                <tr class="test-SUCCESS">
-                    <td width="60" class="step-icon">
-                        
-                            <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                            <span class="nested-group-step">POST https://lre7gz1t0j.execute-api.sa-east-1.amazonaws.com/PRU/ConsultarPagarepdf2</span>
-
-                                <span class="rest-query">
-                <span>
-                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
-                            data-target="#restModal-3">
-                        REST Query
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+                            <div class="error-message ellipsis"
+                                 title='Unknown host exception: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com'>
+                                <pre>Unknown host exception: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com</pre>
+                            </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#stacktraceModal-2">
+                        View stack trace
                     </button>
-                </span>
+                </div>
                 <!-- Modal -->
-                <div class="modal fade" id="restModal-3" tabindex="-1" role="dialog"
-                     aria-labelledby="restModalLabel" aria-hidden="true">
+                <div class="modal fade" id="stacktraceModal-2" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal"
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title" id="restModalLabel">
-                                POST https://lre7gz1t0j.execute-api.sa-east-1.amazonaws.com/PRU/ConsultarPagarepdf2
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                java.net.UnknownHostException
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <p>Status code: 200</p>
-                                    <p>Content Type: application/json</p>
-                                    <h5>Request Headers</h5>
-                                    <pre>Accept=application/json<br>Content-Type=application/json; charset=UTF-8</pre>
-                                    <h5>Content Body</h5>
-                                    <pre>{<br>    &quot;fechahoy&quot;: &quot;2018-10-03T11:49:28&quot;,<br>    &quot;tipoDocumento&quot;: &quot;1&quot;,<br>    &quot;codigoDepositante&quot;: &quot;274&quot;,<br>    &quot;usuario&quot;: &quot;86003582751&quot;,<br>    &quot;horahoy&quot;: &quot;09:00&quot;,<br>    &quot;numeroDocumento&quot;: &quot;79577676&quot;<br>}</pre>
-                                    <h5>Response Headers</h5>
-                                    <pre>Date: Wed, 03 Oct 2018 16:49:29 GMT<br>Content-Type: application/json<br>Content-Length: 2332<br>Connection: keep-alive<br>x-amzn-RequestId: 4b707616-c72c-11e8-a60d-579c69560ac1<br>x-amz-apigw-id: OMrr8EYCmjQFT2Q=<br>x-custom-header: my custom header value<br>X-Amzn-Trace-Id: Root=1-5bb4f319-cabdb629bacf11fdbb3c90a5;Sampled=0</pre>
-                                <h5>Response Body</h5>
-                                    <pre>
-                                        {<br>    &quot;input&quot;: &quot;{\&quot;resource\&quot;:\&quot;/ConsultarPagarepdf2\&quot;,\&quot;path\&quot;:\&quot;/ConsultarPagarepdf2\&quot;,\&quot;httpMethod\&quot;:\&quot;POST\&quot;,\&quot;headers\&quot;:{\&quot;Accept\&quot;:\&quot;application/json\&quot;,\&quot;Accept-Encoding\&quot;:\&quot;gzip,deflate\&quot;,\&quot;Content-Type\&quot;:\&quot;application/json; charset=UTF-8\&quot;,\&quot;Host\&quot;:\&quot;lre7gz1t0j.execute-api.sa-east-1.amazonaws.com\&quot;,\&quot;User-Agent\&quot;:\&quot;Apache-HttpClient/4.5.3 (Java/1.8.0_181)\&quot;,\&quot;X-Amzn-Trace-Id\&quot;:\&quot;Root=1-5bb4f319-cabdb629bacf11fdbb3c90a5\&quot;,\&quot;X-Forwarded-For\&quot;:\&quot;190.144.253.170\&quot;,\&quot;X-Forwarded-Port\&quot;:\&quot;443\&quot;,\&quot;X-Forwarded-Proto\&quot;:\&quot;https\&quot;},\&quot;multiValueHeaders\&quot;:{\&quot;Accept\&quot;:[\&quot;application/json\&quot;],\&quot;Accept-Encoding\&quot;:[\&quot;gzip,deflate\&quot;],\&quot;Content-Type\&quot;:[\&quot;application/json; charset=UTF-8\&quot;],\&quot;Host\&quot;:[\&quot;lre7gz1t0j.execute-api.sa-east-1.amazonaws.com\&quot;],\&quot;User-Agent\&quot;:[\&quot;Apache-HttpClient/4.5.3 (Java/1.8.0_181)\&quot;],\&quot;X-Amzn-Trace-Id\&quot;:[\&quot;Root=1-5bb4f319-cabdb629bacf11fdbb3c90a5\&quot;],\&quot;X-Forwarded-For\&quot;:[\&quot;190.144.253.170\&quot;],\&quot;X-Forwarded-Port\&quot;:[\&quot;443\&quot;],\&quot;X-Forwarded-Proto\&quot;:[\&quot;https\&quot;]},\&quot;queryStringParameters\&quot;:null,\&quot;multiValueQueryStringParameters\&quot;:null,\&quot;pathParameters\&quot;:null,\&quot;stageVariables\&quot;:null,\&quot;requestContext\&quot;:{\&quot;resourceId\&quot;:\&quot;p61pmo\&quot;,\&quot;resourcePath\&quot;:\&quot;/ConsultarPagarepdf2\&quot;,\&quot;httpMethod\&quot;:\&quot;POST\&quot;,\&quot;extendedRequestId\&quot;:\&quot;OMrr8EYCmjQFT2Q=\&quot;,\&quot;requestTime\&quot;:\&quot;03/Oct/2018:16:49:29 +0000\&quot;,\&quot;path\&quot;:\&quot;/PRU/ConsultarPagarepdf2\&quot;,\&quot;accountId\&quot;:\&quot;691686824660\&quot;,\&quot;protocol\&quot;:\&quot;HTTP/1.1\&quot;,\&quot;stage\&quot;:\&quot;PRU\&quot;,\&quot;requestTimeEpoch\&quot;:1538585369295,\&quot;requestId\&quot;:\&quot;4b707616-c72c-11e8-a60d-579c69560ac1\&quot;,\&quot;identity\&quot;:{\&quot;cognitoIdentityPoolId\&quot;:null,\&quot;accountId\&quot;:null,\&quot;cognitoIdentityId\&quot;:null,\&quot;caller\&quot;:null,\&quot;sourceIp\&quot;:\&quot;190.144.253.170\&quot;,\&quot;accessKey\&quot;:null,\&quot;cognitoAuthenticationType\&quot;:null,\&quot;cognitoAuthenticationProvider\&quot;:null,\&quot;userArn\&quot;:null,\&quot;userAgent\&quot;:\&quot;Apache-HttpClient/4.5.3 (Java/1.8.0_181)\&quot;,\&quot;user\&quot;:null},\&quot;apiId\&quot;:\&quot;lre7gz1t0j\&quot;},\&quot;body\&quot;:\&quot;{\\\&quot;fechahoy\\\&quot;:\\\&quot;2018-10-03T11:49:28\\\&quot;,\\\&quot;tipoDocumento\\\&quot;:\\\&quot;1\\\&quot;,\\\&quot;codigoDepositante\\\&quot;:\\\&quot;274\\\&quot;,\\\&quot;usuario\\\&quot;:\\\&quot;86003582751\\\&quot;,\\\&quot;horahoy\\\&quot;:\\\&quot;09:00\\\&quot;,\\\&quot;numeroDocumento\\\&quot;:\\\&quot;79577676\\\&quot;}\&quot;,\&quot;isBase64Encoded\&quot;:false}&quot;,<br>    &quot;mensajesSalida&quot;: {<br>        &quot;codigoPagare&quot;: &quot;0002&quot;,<br>        &quot;codigoDeceval&quot;: &quot;&quot;,<br>        &quot;descripcionPagaré&quot;: &quot;Debe ingresar el numero de pagaré en la entidad&quot;,<br>        &quot;descripcionDeceval&quot;: &quot;&quot;<br>    },<br>    &quot;respuestaServicioDeceval&quot;: [<br>        <br>    ],<br>    &quot;message&quot;: &quot;retornara bien&quot;<br>}
-                                    </pre>
+                                    <h5>lre7gz1t0j.execute-api.sa-east-1.amazonaws.com</h5>
+                                org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java
+                                    :45) <br>
+                                org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java
+                                    :263) <br>
+                                org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java
+                                    :162) <br>
+                                org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java
+                                    :326) <br>
+                                org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java
+                                    :610) <br>
+                                org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java
+                                    :445) <br>
+                                org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java
+                                    :835) <br>
+                                org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java
+                                    :83) <br>
+                                org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java
+                                    :56) <br>
+                                io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java
+                                    :349) <br>
+                                io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy
+                                    :1269) <br>
+                                groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java
+                                    :325) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1213) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1022) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :810) <br>
+                                io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy
+                                    :-1) <br>
+                                io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy
+                                    :30) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.filter.time.TimingFilter.filter(TimingFilter.java
+                                    :56) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java
+                                    :124) <br>
+                                net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java
+                                    :40) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java
+                                    :124) <br>
+                                net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java
+                                    :40) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java
+                                    :124) <br>
+                                net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java
+                                    :40) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java
+                                    :124) <br>
+                                net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java
+                                    :40) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java
+                                    :124) <br>
+                                net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java
+                                    :40) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java
+                                    :124) <br>
+                                net.serenitybdd.rest.filters.FieldsRecordingFilter.filter(FieldsRecordingFilter.java
+                                    :40) <br>
+                                io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy
+                                    :72) <br>
+                                io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy
+                                    :1725) <br>
+                                groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java
+                                    :325) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1213) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1022) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :810) <br>
+                                io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy
+                                    :-1) <br>
+                                io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy
+                                    :1731) <br>
+                                groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java
+                                    :325) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1213) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1022) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :810) <br>
+                                io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy
+                                    :-1) <br>
+                                io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy
+                                    :172) <br>
+                                net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.execute(RequestSpecificationDecorated.java
+                                    :224) <br>
+                                net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.post(RequestSpecificationDecorated.java
+                                    :74) <br>
+                                net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.post(RequestSpecificationDecorated.java
+                                    :69) <br>
+                                net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.post(RequestSpecificationDecorated.java
+                                    :27) <br>
+                                co.com.ath.automation.features.steps.Deceval.DecevalRequest.ConsultaPagareConPdf(DecevalRequest.java
+                                    :99) <br>
+                                co.com.ath.automation.features.steps.Deceval.DecevalStepDefinition.usuario_envia_solicitud_de_consulta_pagare_sin_campo_pagare(DecevalStepDefinition.java
+                                    :176) <br>
                             </div>
+
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">
                                     Close
@@ -252,22 +342,13 @@
                         </div>
                     </div>
                 </div>
-                                </span>
-
-                        </div>
-                    </td>
-                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">0s</span></td>
-                </tr>
-
-                    </table>
-                    </td>
-                    <tr>
-                <tr class="test-SUCCESS">
+                        </td>
+                    </tr>
+                <tr class="test-SKIPPED">
                     <td width="60" class="step-icon">
                         <a name="2"/>
                             <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                  class="top-level-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
@@ -275,13 +356,13 @@
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.01s</span></td>
+                    <td width="100"><span class="top-level-step">SKIPPED</span></td>
+                    <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td colspan="2"></td>
-                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>1.01s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.08s</em></span></td>
                 </tr>
 
             </table>

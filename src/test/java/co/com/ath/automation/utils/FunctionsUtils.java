@@ -43,7 +43,7 @@ public class FunctionsUtils {
                 if (names == null) return null;
                 for (int i = 0; i < names.length(); ++i) {
                     String key = names.getString(i);
-                    System.out.print("Valor key "+key);
+                    System.out.print(" Valor key "+key);
                     if (key.equals(nodoAEliminar)) {
                         jObject.remove(key);
                     }

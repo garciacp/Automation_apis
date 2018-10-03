@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="co.com.ath.automation.features.Runner" time="76.597" tests="53" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="co.com.ath.automation.features.Runner" time="64.102" tests="53" errors="8" skipped="4" failures="4">
   <properties>
     <property name="idea.version" value="2018.2.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -67,54 +67,164 @@
   <testcase name="Given usuario Nuevo solicita consulta pagare sin pdf" classname="Scenario: Consulta de pagare en deceval sin pdf" time="0.001"/>
   <testcase name="When envia la peticion de consulta sin pdf a deceval" classname="Scenario: Consulta de pagare en deceval sin pdf" time="0"/>
   <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: Consulta de pagare en deceval sin pdf" time="0"/>
-  <testcase name="Scenario: Consulta de pagare en deceval sin pdf" classname="Scenario: Consulta de pagare en deceval sin pdf" time="1.433"/>
+  <testcase name="Scenario: Consulta de pagare en deceval sin pdf" classname="Scenario: Consulta de pagare en deceval sin pdf" time="1.411"/>
   <testcase name="Given usuario Nuevo solicita consulta pagare con pdf" classname="Scenario: Consulta de pagare en deceval con pdf" time="0"/>
-  <testcase name="When envia la peticion de consulta con pdf a  deceval" classname="Scenario: Consulta de pagare en deceval con pdf" time="0"/>
-  <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: Consulta de pagare en deceval con pdf" time="0"/>
-  <testcase name="Scenario: Consulta de pagare en deceval con pdf" classname="Scenario: Consulta de pagare en deceval con pdf" time="0.069"/>
-  <testcase name="Given usuario Nuevo solicita crear otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0.001"/>
+  <testcase name="When envia la peticion de consulta con pdf a  deceval" classname="Scenario: Consulta de pagare en deceval con pdf" time="0.005">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+</error>
+    <system-out><![CDATA[14:49:44.954 [main] INFO net.serenitybdd.core.Serenity - FINISHING STEP
+14:49:44.955 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP When envia la peticion de consulta con pdf a  deceval
+14:49:44.993 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://lre7gz1t0j.execute-api.sa-east-1.amazonaws.com:443
+14:50:00.005 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@20256a0b closed
+14:50:00.005 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@20256a0b shut down
+14:50:00.005 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@624b3544
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Consulta de pagare en deceval con pdf" classname="Scenario: Consulta de pagare en deceval con pdf" time="0.006">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+</error>
+  </testcase>
+  <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: Consulta de pagare en deceval con pdf" time="0">
+    <skipped/>
+    <system-out><![CDATA[14:50:00.020 [main] INFO net.serenitybdd.core.Serenity - STEP ERROR: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+14:50:00.021 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Then la consulta debe ser aprobada pagare
+]]></system-out>
+  </testcase>
+  <testcase name="Given usuario Nuevo solicita crear otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0"/>
   <testcase name="When envia la peticion para crear otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0"/>
   <testcase name="Then la consulta debe ser aprobada otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0"/>
   <testcase name="And el cliente ya existe" classname="Scenario: usuario nuevo crea otorgante" time="0"/>
-  <testcase name="Scenario: usuario nuevo crea otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0.064"/>
+  <testcase name="Scenario: usuario nuevo crea otorgante" classname="Scenario: usuario nuevo crea otorgante" time="0.062"/>
   <testcase name="Given usuario Nuevo solicita crear pagare" classname="Scenario: usuario nuevo crea pagare" time="0"/>
   <testcase name="When envia la peticion para crear pagare" classname="Scenario: usuario nuevo crea pagare" time="0"/>
-  <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: usuario nuevo crea pagare" time="0"/>
-  <testcase name="Scenario: usuario nuevo crea pagare" classname="Scenario: usuario nuevo crea pagare" time="0.048"/>
+  <testcase name="Then la consulta debe ser aprobada pagare" classname="Scenario: usuario nuevo crea pagare" time="0.001">
+    <failure message="&#10;Expected: &quot;SDL.SE.0000&quot;&#10;     but: was &quot;SDL.SE.0098&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000"
+     but: was "SDL.SE.0098"
+</failure>
+    <system-out><![CDATA[14:50:05.516 [main] INFO net.serenitybdd.core.Serenity - FINISHING STEP
+14:50:05.517 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Then la consulta debe ser aprobada pagare
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: usuario nuevo crea pagare" classname="Scenario: usuario nuevo crea pagare" time="0.001">
+    <failure message="&#10;Expected: &quot;SDL.SE.0000&quot;&#10;     but: was &quot;SDL.SE.0098&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000"
+     but: was "SDL.SE.0098"
+</failure>
+  </testcase>
   <testcase name="Given usuario Nuevo solicita firmar pagare" classname="Scenario: usuario nuevo Firma pagare" time="0"/>
   <testcase name="When envia la peticion para firmar pagare" classname="Scenario: usuario nuevo Firma pagare" time="0"/>
-  <testcase name="Then la firma debe ser aprobada" classname="Scenario: usuario nuevo Firma pagare" time="0"/>
-  <testcase name="Scenario: usuario nuevo Firma pagare" classname="Scenario: usuario nuevo Firma pagare" time="0.04"/>
+  <testcase name="Then la firma debe ser aprobada" classname="Scenario: usuario nuevo Firma pagare" time="0.001">
+    <failure message="&#10;Expected: &quot;SDL.SE.0000: Exitoso.&quot;&#10;     but: was &quot;Error firmando pagaré, por favor revise los datos de entrada&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000: Exitoso."
+     but: was "Error firmando pagaré, por favor revise los datos de entrada"
+</failure>
+    <system-out><![CDATA[14:50:08.202 [main] INFO net.serenitybdd.core.Serenity - FINISHING STEP
+14:50:08.203 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Then la firma debe ser aprobada
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: usuario nuevo Firma pagare" classname="Scenario: usuario nuevo Firma pagare" time="0.001">
+    <failure message="&#10;Expected: &quot;SDL.SE.0000: Exitoso.&quot;&#10;     but: was &quot;Error firmando pagaré, por favor revise los datos de entrada&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000: Exitoso."
+     but: was "Error firmando pagaré, por favor revise los datos de entrada"
+</failure>
+  </testcase>
   <testcase name="Given usuario solicita crear nuevo otorgante con fecha hoy incorrecta" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0"/>
   <testcase name="When usuario envia solicitud crear nuevo otorgante" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0"/>
   <testcase name="Then la solicitud es rechazada por fecha incorrecta" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0"/>
-  <testcase name="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0.067"/>
-  <testcase name="Given usuario envia creacion otorgante sin algun campo obligatorio" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0.001"/>
+  <testcase name="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" classname="Scenario: usuario crea nuevo otorgante con fecha hoy incorrecta" time="0.037"/>
+  <testcase name="Given usuario envia creacion otorgante sin algun campo obligatorio" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0"/>
   <testcase name="When usuario envia solicitud crear nuevo otorgante sin algun campo obligatorio" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0"/>
   <testcase name="Then la solicitud es rechazada indicando el error en el header" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0"/>
-  <testcase name="Scenario: usuario envia creacion otorgante sin numero documento" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0.054"/>
+  <testcase name="Scenario: usuario envia creacion otorgante sin numero documento" classname="Scenario: usuario envia creacion otorgante sin numero documento" time="0.051"/>
   <testcase name="Given usuario envia solicitud consulta pagare con pdf con id inexistente" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0"/>
-  <testcase name="When usuario envia solicitud consulta pagare con pdf" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0"/>
-  <testcase name="Then el servicio debe responder no existe id pagare" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0"/>
-  <testcase name="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0.075"/>
+  <testcase name="When usuario envia solicitud consulta pagare con pdf" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0.001">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+</error>
+    <system-out><![CDATA[14:50:29.877 [main] INFO net.serenitybdd.core.Serenity - FINISHING STEP
+14:50:29.877 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP When usuario envia solicitud consulta pagare con pdf
+14:50:29.897 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://lre7gz1t0j.execute-api.sa-east-1.amazonaws.com:443
+14:50:29.898 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@919086 closed
+14:50:29.898 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@919086 shut down
+14:50:29.898 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@67e77f52
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0.001">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+</error>
+  </testcase>
+  <testcase name="Then el servicio debe responder no existe id pagare" classname="Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente" time="0">
+    <skipped/>
+    <system-out><![CDATA[14:50:29.903 [main] INFO net.serenitybdd.core.Serenity - STEP ERROR: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+14:50:29.903 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Then el servicio debe responder no existe id pagare
+]]></system-out>
+  </testcase>
   <testcase name="Given usuario envia solicitud de consulta con fecha hoy" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0"/>
-  <testcase name="When usuario envia solicitud consulta pagare con pdf con fecha hoy incorrecta" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0"/>
-  <testcase name="Then el servicio debe responder error en fecha hoy" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0"/>
-  <testcase name="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0.055"/>
+  <testcase name="When usuario envia solicitud consulta pagare con pdf con fecha hoy incorrecta" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0.001">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+</error>
+    <system-out><![CDATA[14:50:29.962 [main] INFO net.serenitybdd.core.Serenity - FINISHING STEP
+14:50:29.962 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP When usuario envia solicitud consulta pagare con pdf con fecha hoy incorrecta
+14:50:29.977 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://lre7gz1t0j.execute-api.sa-east-1.amazonaws.com:443
+14:50:29.979 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@63485d7 closed
+14:50:29.979 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@63485d7 shut down
+14:50:29.979 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@23ea8830
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0.001">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+</error>
+  </testcase>
+  <testcase name="Then el servicio debe responder error en fecha hoy" classname="Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta" time="0">
+    <skipped/>
+    <system-out><![CDATA[14:50:29.983 [main] INFO net.serenitybdd.core.Serenity - STEP ERROR: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+14:50:29.983 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Then el servicio debe responder error en fecha hoy
+]]></system-out>
+  </testcase>
   <testcase name="Given usuario envia solicitud de consulta pagare sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0"/>
-  <testcase name="When usuario envia solicitud de consulta pagare sin campo pagare" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0"/>
-  <testcase name="Then la solicitud es rechazada indicando pagare requerido" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0"/>
-  <testcase name="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0.068"/>
+  <testcase name="When usuario envia solicitud de consulta pagare sin campo pagare" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0.004">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+</error>
+    <system-out><![CDATA[14:50:30.045 [main] INFO net.serenitybdd.core.Serenity - FINISHING STEP
+14:50:30.046 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP When usuario envia solicitud de consulta pagare sin campo pagare
+ Valor key fechahoy Valor key tipoDocumento Valor key numPagareEntidad Valor key codigoDepositante Valor key usuario Valor key horahoy Valor key numeroDocumento14:50:30.103 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {s}->https://lre7gz1t0j.execute-api.sa-east-1.amazonaws.com:443
+14:50:30.104 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@49038f97 closed
+14:50:30.105 [main] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@49038f97 shut down
+14:50:30.106 [main] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@36211bbc
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0.007">
+    <error message="Some exception during recording fields" type="java.lang.RuntimeException">java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+</error>
+  </testcase>
+  <testcase name="Then la solicitud es rechazada indicando pagare requerido" classname="Scenario: usuario envia solicitud de consulta sin algun campo obligatorio" time="0">
+    <skipped/>
+    <system-out><![CDATA[14:50:30.123 [main] INFO net.serenitybdd.core.Serenity - STEP ERROR: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+14:50:30.124 [main] INFO net.serenitybdd.core.Serenity - STARTING STEP Then la solicitud es rechazada indicando pagare requerido
+]]></system-out>
+  </testcase>
   <testcase name="Given el usuario solicita crear pagare sin cuenta otorgante" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0"/>
   <testcase name="When el usuario envia la peticion para crear pagare sin cuenta otorgante" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0"/>
   <testcase name="Then el pagare debe ser creado si se envia numero de documento" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0"/>
-  <testcase name="Scenario: usuario solicita crear pagare sin cuenta otorgante" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0.044"/>
+  <testcase name="Scenario: usuario solicita crear pagare sin cuenta otorgante" classname="Scenario: usuario solicita crear pagare sin cuenta otorgante" time="0.056"/>
   <testcase name="Given el usuario solicita crear pagare sin numero pagare" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0"/>
   <testcase name="When envia la peticion crear pagare sin numero pagare" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0"/>
   <testcase name="Then el servicio debe generar error en la creacion de pagare" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0"/>
-  <testcase name="Scenario: usuario solicita crear pagare sin numero pagare entidad" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0.062"/>
-  <testcase name="Given el usuario solicita firmar pagare con id inexistente" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0"/>
-  <testcase name="When envia la peticion firmar pagare con id" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0"/>
-  <testcase name="Then el servicio debe generar error id pagare no existe" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0"/>
-  <testcase name="Scenario: usuario solicita firmar pagare con id pagare" classname="Scenario: usuario solicita firmar pagare con id pagare" time="0.072"/>
+  <testcase name="Scenario: usuario solicita crear pagare sin numero pagare entidad" classname="Scenario: usuario solicita crear pagare sin numero pagare entidad" time="0.047"/>
+  <testcase name="Given el usuario solicita firmar pagare con id inexistente" classname="Scenario: usuario solicita firmar pagare con id pagare inexistente" time="0"/>
+  <testcase name="When envia la peticion firmar pagare con id" classname="Scenario: usuario solicita firmar pagare con id pagare inexistente" time="0"/>
+  <testcase name="Then el servicio debe generar error id pagare no existe" classname="Scenario: usuario solicita firmar pagare con id pagare inexistente" time="0"/>
+  <testcase name="Scenario: usuario solicita firmar pagare con id pagare inexistente" classname="Scenario: usuario solicita firmar pagare con id pagare inexistente" time="0.064"/>
 </testsuite>

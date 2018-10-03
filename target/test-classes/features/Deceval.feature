@@ -81,7 +81,7 @@ Feature: Firma Pagare Deceval
 
   #Historias de usuario firmas pagare
   @Deceval @Firmarpagare @pruebasDeceval
-    Scenario: usuario solicita firmar pagare con id pagare
+    Scenario: usuario solicita firmar pagare con id pagare inexistente
         Given el usuario solicita firmar pagare con id inexistente
         When envia la peticion firmar pagare con id
         Then el servicio debe generar error id pagare no existe

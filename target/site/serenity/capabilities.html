@@ -50,11 +50,11 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 1],
+                ['Passing', 0],
                 ['Pending', 0],
                 ['Ignored', 0],
                 ['Failing', 0],
-                ['Errors',  0],
+                ['Errors',  1],
                 ['Compromised',  0],
                 ['Untested',  3],
             ]
@@ -83,11 +83,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '1 requirements tested successfully'},
+                {label: '0 requirements tested successfully'},
                 {label: '0 requirements pending'},
                 {label: '0} requirements skipped'},
                 {label: '0} requirements with failures'},
-                {label: '0} requirements with errors'},
+                {label: '1} requirements with errors'},
                 {label: '0} requirements compromised'},
                 {label: '3} requirements untested'},
             ]
@@ -178,7 +178,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-10-2018 11:48</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-10-2018 14:49</span>
     <br style="clear:left"/>
 </div>
 
@@ -211,7 +211,7 @@
                                     <tr>
                                         <td class="summary-leading-column"><a href="#requirements-tabs">Features</a></td>
                                         <td>4</td>
-                                        <td>1</td>
+                                        <td>0</td>
                                         <td>0</td>
                                         <td>0</td>
                                         <td>3</td>
@@ -221,8 +221,8 @@
                                 <tr>
                                     <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria (tests)</a></td>
                                     <td>13</td>
-                                    <td>13</td>
-                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>6</td>
                                     <td>0</td>
                                     <td>0</td>
                                     <td></td>
@@ -252,8 +252,8 @@
         <tr>
             <td class="summary-leading-column">Automated</td>
             <td>13</td>
-            <td>13 (100%)</td>
-            <td>0 (0%)</td>
+            <td>7 (54%)</td>
+            <td>6 (46%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
@@ -268,14 +268,14 @@
         <tr>
             <td class="summary-leading-column">Total</td>
             <td>13</td>
-            <td>13 (100%)</td>
-            <td>0 (0%)</td>
+            <td>7 (54%)</td>
+            <td>6 (46%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">1 minutes 13 seconds</td>
+                <td colspan="5">1 minutes 0 seconds</td>
         </tr>
         </body>
     </table>
@@ -432,14 +432,14 @@
                 </tr>
 
 
-                <tr class="test-SUCCESS requirementRow">
+                <tr class="test-ERROR requirementRow">
                     <td class="requirementRowCell">
-                        <span class="status_icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
-                        <span style="display:none">1</span>
+                        <span class="status_icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                        <span style="display:none">4</span>
                     </td>
                     <td class="cardNumber requirementRowCell"></td>
 
-                    <td class="SUCCESS-text requirementRowCell">
+                    <td class="ERROR-text requirementRowCell">
                         <a href="javaScript:void(0)" class="read-more-link">
                             <img src="images/plus.png" height="16"/></a>
                         <span class="requirementName"><a
@@ -451,10 +451,10 @@
 
                     <td class="greentext highlighted-value requirementRowCell">13</td>
 <!--
-                    <td class="greentext requirementRowCell">13</td>
+                    <td class="greentext requirementRowCell">7</td>
                     <td class="bluetext requirementRowCell">0</td>
-                    <td class="redtext requirementRowCell">0</td>
-                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">2</td>
+                    <td class="lightorangetext requirementRowCell">4</td>
                     <td class="violettext requirementRowCell">0</td>
 -->
                         <td class="greentext highlighted-value requirementRowCell">0</td>
@@ -471,23 +471,23 @@
 <table>
     <tr>
         <td width="40px">
-            <div class="small">100%</div>
+            <div class="small">53.8%</div>
         </td>
         <td width="125px">
             <div class="percentagebar"
                  title="  - Total tests: 13
-  - Passing tests: 13 (100%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 7 (53.8%)
+  - Failing tests: 2 (15.4%)
+  - Tests with errors: 4 (30.8%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)"
                  style="width: 125px;">
                 <div class="pendingbar"
                      title="  - Total tests: 13
-  - Passing tests: 13 (100%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 7 (53.8%)
+  - Failing tests: 2 (15.4%)
+  - Tests with errors: 4 (30.8%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)"
@@ -495,45 +495,45 @@
                     <div class="ignoredbar"
                          style="width: 125px;"
                          title="  - Total tests: 13
-  - Passing tests: 13 (100%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 7 (53.8%)
+  - Failing tests: 2 (15.4%)
+  - Tests with errors: 4 (30.8%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                         <div class="compromisedbar"
                              style="width: 125px;"
                              title="  - Total tests: 13
-  - Passing tests: 13 (100%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 7 (53.8%)
+  - Failing tests: 2 (15.4%)
+  - Tests with errors: 4 (30.8%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                             <div class="errorbar"
                                  style="width: 125px;"
                                  title="  - Total tests: 13
-  - Passing tests: 13 (100%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 7 (53.8%)
+  - Failing tests: 2 (15.4%)
+  - Tests with errors: 4 (30.8%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                                 <div class="failingbar"
-                                     style="width: 125px;"
+                                     style="width: 87px;"
                                      title="  - Total tests: 13
-  - Passing tests: 13 (100%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 7 (53.8%)
+  - Failing tests: 2 (15.4%)
+  - Tests with errors: 4 (30.8%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                                     <div class="passingbar"
-                                         style="width: 125px;"
+                                         style="width: 67px;"
                                          title="  - Total tests: 13
-  - Passing tests: 13 (100%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 7 (53.8%)
+  - Failing tests: 2 (15.4%)
+  - Tests with errors: 4 (30.8%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
@@ -834,32 +834,32 @@
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:48:19">11:48:19</td>
+                                <td class="SUCCESS-text" data-sort="2018-10-03 14:49:32">14:49:32</td>
 
-                                <td class="SUCCESS-text">10.47</td>
+                                <td class="SUCCESS-text">10.99</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
                                     <div class="ellipsis">
 
                                         <a href="955efb9b7a6d9e2a3852122dbf766ba289c7585a01c6ef6b009e4c4132869173.html" class="ellipsis"
-                                           title="Consulta de pagare en deceval con pdf ">
+                                           title="Consulta de pagare en deceval con pdf Unknown host exception: lre7gz1t0j.ex...">
                                             Consulta de pagare en deceval con pdf
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">4</td>
+                                <td class="ERROR-text">3</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:48:31">11:48:31</td>
+                                <td class="ERROR-text" data-sort="2018-10-03 14:49:44">14:49:44</td>
 
-                                <td class="SUCCESS-text">4.94</td>
+                                <td class="ERROR-text">15.07</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -880,55 +880,55 @@
                                 <td class="SUCCESS-text">5</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:48:36">11:48:36</td>
+                                <td class="SUCCESS-text" data-sort="2018-10-03 14:50:00">14:50:00</td>
 
-                                <td class="SUCCESS-text">2.2</td>
+                                <td class="SUCCESS-text">2.15</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
                                     <div class="ellipsis">
 
                                         <a href="89cb72c024d0a90c017c19b805ca21383610f6def366b6ececf540b0977951be.html" class="ellipsis"
-                                           title="usuario nuevo crea pagare ">
+                                           title="usuario nuevo crea pagare Assertion error: Expected: 'SDL.SE.00...">
                                             usuario nuevo crea pagare
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">4</td>
+                                <td class="FAILURE-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:48:38">11:48:38</td>
+                                <td class="FAILURE-text" data-sort="2018-10-03 14:50:02">14:50:02</td>
 
-                                <td class="SUCCESS-text">5.3</td>
+                                <td class="FAILURE-text">3.19</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
                                     <div class="ellipsis">
 
                                         <a href="7d8c10e0382b6304d58e0488f49b00e6f9973295909157dd502c75cb31c3ea3d.html" class="ellipsis"
-                                           title="usuario nuevo Firma pagare ">
+                                           title="usuario nuevo Firma pagare Assertion error: Expected: 'SDL.SE.00...">
                                             usuario nuevo Firma pagare
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">4</td>
+                                <td class="FAILURE-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:48:43">11:48:43</td>
+                                <td class="FAILURE-text" data-sort="2018-10-03 14:50:05">14:50:05</td>
 
-                                <td class="SUCCESS-text">28.92</td>
+                                <td class="FAILURE-text">2.61</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -949,9 +949,9 @@
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:12">11:49:12</td>
+                                <td class="SUCCESS-text" data-sort="2018-10-03 14:50:08">14:50:08</td>
 
-                                <td class="SUCCESS-text">2.12</td>
+                                <td class="SUCCESS-text">1.91</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -972,78 +972,78 @@
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:14">11:49:14</td>
+                                <td class="SUCCESS-text" data-sort="2018-10-03 14:50:10">14:50:10</td>
 
-                                <td class="SUCCESS-text">8.82</td>
+                                <td class="SUCCESS-text">19.62</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
                                     <div class="ellipsis">
 
                                         <a href="8cf7932f4c0f059cbf556cb725e203ebc21aee1886566ff7db202e4f882c854a.html" class="ellipsis"
-                                           title="usuario envia solicitud de consulta pagare con pdf con id inexistente ">
+                                           title="usuario envia solicitud de consulta pagare con pdf con id inexistente Unknown host exception: lre7gz1t0j.ex...">
                                             usuario envia solicitud de consulta pagare con pdf con id inexistente
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">4</td>
+                                <td class="ERROR-text">3</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:23">11:49:23</td>
+                                <td class="ERROR-text" data-sort="2018-10-03 14:50:29">14:50:29</td>
 
-                                <td class="SUCCESS-text">2.45</td>
+                                <td class="ERROR-text">0.03</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
                                     <div class="ellipsis">
 
                                         <a href="a0dd6a29eeff8736301707dac5a62bfbbd3c6582067d3a5bc4b40cc2b2ba9b51.html" class="ellipsis"
-                                           title="usuario envia solicitud de consulta con fecha hoy incorrecta ">
+                                           title="usuario envia solicitud de consulta con fecha hoy incorrecta Unknown host exception: lre7gz1t0j.ex...">
                                             usuario envia solicitud de consulta con fecha hoy incorrecta
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">4</td>
+                                <td class="ERROR-text">3</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:26">11:49:26</td>
+                                <td class="ERROR-text" data-sort="2018-10-03 14:50:29">14:50:29</td>
 
-                                <td class="SUCCESS-text">2.15</td>
+                                <td class="ERROR-text">0.02</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
                                     <div class="ellipsis">
 
                                         <a href="9d5392329d2ee03d7c2dadbec5bcd744872c8e9340eec87a226466f39e3fb491.html" class="ellipsis"
-                                           title="usuario envia solicitud de consulta sin algun campo obligatorio ">
+                                           title="usuario envia solicitud de consulta sin algun campo obligatorio Unknown host exception: lre7gz1t0j.ex...">
                                             usuario envia solicitud de consulta sin algun campo obligatorio
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">4</td>
+                                <td class="ERROR-text">3</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:28">11:49:28</td>
+                                <td class="ERROR-text" data-sort="2018-10-03 14:50:30">14:50:30</td>
 
-                                <td class="SUCCESS-text">1.01</td>
+                                <td class="ERROR-text">0.08</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1064,9 +1064,9 @@
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:29">11:49:29</td>
+                                <td class="SUCCESS-text" data-sort="2018-10-03 14:50:30">14:50:30</td>
 
-                                <td class="SUCCESS-text">1.58</td>
+                                <td class="SUCCESS-text">1.52</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1087,9 +1087,9 @@
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:31">11:49:31</td>
+                                <td class="SUCCESS-text" data-sort="2018-10-03 14:50:31">14:50:31</td>
 
-                                <td class="SUCCESS-text">1.4</td>
+                                <td class="SUCCESS-text">1.39</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1099,9 +1099,9 @@
                                 <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
-                                        <a href="b9eeba293a2a3af9040e4f8ab8fcb054127d258cf680a3745a632bdc5028d988.html" class="ellipsis"
-                                           title="usuario solicita firmar pagare con id pagare ">
-                                            usuario solicita firmar pagare con id pagare
+                                        <a href="c85b16158ac019b779880fcb49f4686d211c43085ce8cf5bfb73b17695ce2a04.html" class="ellipsis"
+                                           title="usuario solicita firmar pagare con id pagare inexistente ">
+                                            usuario solicita firmar pagare con id pagare inexistente
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
@@ -1110,9 +1110,9 @@
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-10-03 11:49:32">11:49:32</td>
+                                <td class="SUCCESS-text" data-sort="2018-10-03 14:50:33">14:50:33</td>
 
-                                <td class="SUCCESS-text">2.15</td>
+                                <td class="SUCCESS-text">2.18</td>
                             </tr>
                         </tbody>
                     </table>

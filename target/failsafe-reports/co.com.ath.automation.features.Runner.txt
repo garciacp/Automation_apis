@@ -1,4 +1,60 @@
 -------------------------------------------------------------------------------
 Test set: co.com.ath.automation.features.Runner
 -------------------------------------------------------------------------------
-Tests run: 53, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 76.597 s - in co.com.ath.automation.features.Runner
+Tests run: 53, Failures: 4, Errors: 8, Skipped: 4, Time elapsed: 64.102 s <<< FAILURE! - in co.com.ath.automation.features.Runner
+When envia la peticion de consulta con pdf a  deceval(Scenario: Consulta de pagare en deceval con pdf)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+
+Scenario: Consulta de pagare en deceval con pdf  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+
+Then la consulta debe ser aprobada pagare(Scenario: usuario nuevo crea pagare)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000"
+     but: was "SDL.SE.0098"
+
+Scenario: usuario nuevo crea pagare  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000"
+     but: was "SDL.SE.0098"
+
+Then la firma debe ser aprobada(Scenario: usuario nuevo Firma pagare)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000: Exitoso."
+     but: was "Error firmando pagaré, por favor revise los datos de entrada"
+
+Scenario: usuario nuevo Firma pagare  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "SDL.SE.0000: Exitoso."
+     but: was "Error firmando pagaré, por favor revise los datos de entrada"
+
+When usuario envia solicitud consulta pagare con pdf(Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+
+Scenario: usuario envia solicitud de consulta pagare con pdf con id inexistente  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com: nodename nor servname provided, or not known
+
+When usuario envia solicitud consulta pagare con pdf con fecha hoy incorrecta(Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+
+Scenario: usuario envia solicitud de consulta con fecha hoy incorrecta  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+
+When usuario envia solicitud de consulta pagare sin campo pagare(Scenario: usuario envia solicitud de consulta sin algun campo obligatorio)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+
+Scenario: usuario envia solicitud de consulta sin algun campo obligatorio  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.RuntimeException: Some exception during recording fields
+Caused by: java.net.UnknownHostException: lre7gz1t0j.execute-api.sa-east-1.amazonaws.com
+
