@@ -1,6 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Firma Pagare Deceval","Consulta de pagare en deceval sin pdf","SUCCESS","14:49:32","0.0","10.99"
-"Firma Pagare Deceval","Consulta de pagare en deceval con pdf","ERROR","14:49:44","0.0","15.07"
-"Firma Pagare Deceval","usuario envia solicitud de consulta pagare con pdf con id inexistente","ERROR","14:50:29","0.0","0.03"
-"Firma Pagare Deceval","usuario envia solicitud de consulta con fecha hoy incorrecta","ERROR","14:50:29","0.0","0.02"
-"Firma Pagare Deceval","usuario envia solicitud de consulta sin algun campo obligatorio","ERROR","14:50:30","0.0","0.08"

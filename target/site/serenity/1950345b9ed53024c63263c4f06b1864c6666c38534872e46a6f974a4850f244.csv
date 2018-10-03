@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Firma Pagare Deceval","usuario nuevo Firma pagare","FAILURE","14:50:05","0.0","2.61"
-"Firma Pagare Deceval","usuario solicita firmar pagare con id pagare inexistente","SUCCESS","14:50:33","0.0","2.18"

@@ -1,8 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Firma Pagare Deceval","Consulta de pagare en deceval sin pdf","SUCCESS","14:49:32","0.0","10.99"
-"Firma Pagare Deceval","usuario nuevo crea otorgante","SUCCESS","14:50:00","0.0","2.15"
-"Firma Pagare Deceval","usuario crea nuevo otorgante con fecha hoy incorrecta","SUCCESS","14:50:08","0.0","1.91"
-"Firma Pagare Deceval","usuario envia creacion otorgante sin numero documento","SUCCESS","14:50:10","0.0","19.62"
-"Firma Pagare Deceval","usuario solicita crear pagare sin cuenta otorgante","SUCCESS","14:50:30","0.0","1.52"
-"Firma Pagare Deceval","usuario solicita crear pagare sin numero pagare entidad","SUCCESS","14:50:31","0.0","1.39"
-"Firma Pagare Deceval","usuario solicita firmar pagare con id pagare inexistente","SUCCESS","14:50:33","0.0","2.18"
