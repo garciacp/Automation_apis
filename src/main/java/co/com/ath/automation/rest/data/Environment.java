@@ -45,6 +45,8 @@ public interface Environment extends Config {
 
   String url_cancelarPagareDeceval();
 
+  String url_authentication_v7();
+
   int datoseguro_rojo();
 
   int datoseguro_rojo_verde();

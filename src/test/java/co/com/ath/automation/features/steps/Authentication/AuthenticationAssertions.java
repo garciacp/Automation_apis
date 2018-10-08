@@ -9,31 +9,31 @@ public class AuthenticationAssertions {
 
   public static void shouldSeeSuccessfulStatusCodeVillas() {
     // assertThat(SerenityRest.then().extract().body().jsonPath().get("MsgRsHdr.Status.StatusCode"), equalTo(0));
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.BankId"),
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.bankId"),
         equalTo(10524));
   }
 
   public static void shouldSeeSuccessfulStatusCodePopular() {
     //  assertThat(SerenityRest.then().extract().body().jsonPath().get("MsgRsHdr.Status.StatusCode"), equalTo(0));
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.BankId"),
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.bankId"),
         equalTo(10029));
   }
 
   public static void shouldSeeSuccessfulStatusCodeOccidente() {
     //   assertThat(SerenityRest.then().extract().body().jsonPath().get("MsgRsHdr.Status.StatusCode"), equalTo(0));
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.BankId"),
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.bankId"),
         equalTo(10236));
   }
 
   public static void aceptadarojo() {
     //   assertThat(SerenityRest.then().extract().body().jsonPath().get("MsgRsHdr.Status.StatusCode"), equalTo(0));
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.BankId"),
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.bankId"),
         equalTo(10236));
   }
 
   public static void aceptadaaval() {
     //   assertThat(SerenityRest.then().extract().body().jsonPath().get("MsgRsHdr.Status.StatusCode"), equalTo(0));
-    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.BankId"),
+    assertThat(SerenityRest.then().extract().body().jsonPath().get("bankInfo.bankId"),
         equalTo(10999));
   }
 

@@ -19,7 +19,7 @@ public class ServicePaths {
   }
 
   public static URL pathAuthentication() throws MalformedURLException {
-    return new URL(environment.datapower() + environment.url_authentication_v5());
+    return new URL(environment.datapower() + environment.url_authentication_v7());
   }
 
   public static URL pathDeceval_consultaSinPdf() throws MalformedURLException {
