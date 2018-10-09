@@ -63,6 +63,10 @@ public interface Environment extends Config {
 
   int datoseguro_cifin();
 
+  String urlCambiarEstadoPagare();
+
+  String urlAnularPagare();
+
 }
 
 

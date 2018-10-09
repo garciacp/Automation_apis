@@ -88,6 +88,18 @@ Feature: Firma Pagare Deceval
         When envia la peticion firmar pagare con codigo inexistente
         Then el servicio debe generar error codigo pagare no existe
 
+  #Historias de usurio cambiar estado pagare
+  @Deceval @CambiarEstadoPagare
+    Scenario: usuario desea crear el cambio el estado de un pagare
+        Given el usuario solicita cambiar estado pagare
+        When el usuario envia la peticion de cambiar estado pagare
+        Then el servicio debe responder cambio de estado exitoso
+
+  @Deceval @RegistarAnulacionPagare
+    Scenario: un usuario desea registar la anulacion del un pagare
+        Given el usuario solicita anular un pagare
+        When el usuario envia la peticion de anulacion para un pagare
+        Then el servicio debe responder la anulacion de pagare fue exitoso
 
   #Historias de usuario cancelar pagare
   @Deceval @CancelarPagare @Basico
@@ -95,4 +107,3 @@ Feature: Firma Pagare Deceval
         Given el usuario solicita cancelar pagare con codigo existente
         When envia la peticion de cancelar pagare con codigo existente
         Then el servicio debe respoder error de amortización ya que no existe cambio de esta previo
-

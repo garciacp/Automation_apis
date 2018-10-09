@@ -18,4 +18,7 @@ public class DecevalStaticCode {
     public static final String COD_RSPTA_ERROR = "0001";
     public static final String CREAR_PAGARE_POSICION_NUM_PAGARE_ENTIDAD = "numPagareEntidad";
     public static final String CANCELAR_PAGARE_NUM_PAGARE = "idDocumentoPagare_DocPag";
+    public static final String COD_DECEVAL = "codigoDeceval";
+    public static final String COD_CAMBIO_ESTADO_PAGARE_OK = "SDL.SE.EPF.2";
+    public static final String COD_ANULACION_PAGARE_OK = "SDL.SE.0180";
 }

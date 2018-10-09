@@ -46,4 +46,12 @@ public class ServicePaths {
     return new URL(environment.url_cancelarPagareDeceval());
   }
 
+  public static URL pathDecevalCambiarEstadoPagare() throws MalformedURLException {
+    return new URL(environment.urlCambiarEstadoPagare());
+  }
+
+  public static URL pathDecevalAnularPagare() throws MalformedURLException {
+    return new URL(environment.urlAnularPagare());
+  }
+
 }

@@ -16,7 +16,7 @@ public class DecevalRequest {
   private static String numeroPagareDeceval;
   public FunctionsUtils functionsUtils = new FunctionsUtils();
 
-  public String CrearOtorganteBody(int numeroDiasMenos, String eliminarCampo) {
+  public String crearOtorganteBody(int numeroDiasMenos, String eliminarCampo) {
 
       JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CrearOtorgante.json", DecevalStaticCode.CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
@@ -26,7 +26,7 @@ public class DecevalRequest {
 
   }
 
-  public String CrearPagareBody(int numeroDiasMenos, String eliminarCampo, String nodoAEliminar) {
+  public String crearPagareBody(int numeroDiasMenos, String eliminarCampo, String nodoAEliminar) {
 
       JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CrearPagare.json", nodoAEliminar);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
@@ -40,7 +40,7 @@ public class DecevalRequest {
 
   }
 
-  public String FirmaPagareBody(int numeroDiasMenos, String numeroPagare) {
+  public String firmaPagareBody(int numeroDiasMenos, String numeroPagare) {
 
     try {
       String firmaPagareBody = IOUtils.toString(
@@ -63,7 +63,7 @@ public class DecevalRequest {
     }
   }
 
-  public String ConsultarPagareSinPdfBody(int numeroDiasMenos) {
+  public String consultarPagareSinPdfBody(int numeroDiasMenos) {
 
     try {
       String consultarPagareSinPdfBody = IOUtils.toString(
@@ -79,7 +79,7 @@ public class DecevalRequest {
     }
   }
 
-  public String ConsultarPagareConPdfBody(int numeroDiasMenos, String numeroId, String eliminarCampo) {
+  public String consultarPagareConPdfBody(int numeroDiasMenos, String numeroId, String eliminarCampo) {
 
         JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_Consulta_ConPdf.json", DecevalStaticCode.CONSULTA_PAGARE_POSICION_NUM_PAGARE);
         jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
@@ -97,32 +97,32 @@ public class DecevalRequest {
   }
 
 
-  public void ConsultaPagareConPdf(int numeroDiasMenos, String numeroId, String eliminarCampo) throws IOException {
+  public void consultaPagareConPdf(int numeroDiasMenos, String numeroId, String eliminarCampo) throws IOException {
 
     given()
         .contentType("application/json")
         .accept("application/json")
-        .body(ConsultarPagareConPdfBody(numeroDiasMenos, numeroId, eliminarCampo))
+        .body(consultarPagareConPdfBody(numeroDiasMenos, numeroId, eliminarCampo))
         .when().post(ServicePaths.pathDeceval_consultaConPdf());
   }
 
-  public void ConsultaPagareSinPdf(int numeroDiasMenos) throws IOException {
+  public void consultaPagareSinPdf(int numeroDiasMenos) throws IOException {
 
     given()
         .contentType("application/json")
         .accept("application/json")
-        .body(ConsultarPagareSinPdfBody(numeroDiasMenos))
+        .body(consultarPagareSinPdfBody(numeroDiasMenos))
         .when().post(ServicePaths.pathDeceval_consultaSinPdf());
   }
 
 
-  public void CrearOtorgante(int numeroDiasMenos, String eliminarCampo) throws IOException {
+  public void crearOtorgante(int numeroDiasMenos, String eliminarCampo) throws IOException {
 
     Response response =
             given()
         .contentType("application/json")
         .accept("application/json")
-        .body(CrearOtorganteBody(numeroDiasMenos,eliminarCampo))
+        .body(crearOtorganteBody(numeroDiasMenos,eliminarCampo))
         .when().post(ServicePaths.pathDeceval_crearotorgante())
         .then().contentType("application/json")
         .extract().response();
@@ -130,12 +130,12 @@ public class DecevalRequest {
   }
 
 
-  public void CrearPagare(int numeroDiasMenos, String eliminarCampo, String nodoAEliminar) throws IOException {
+  public void crearPagare(int numeroDiasMenos, String eliminarCampo, String nodoAEliminar) throws IOException {
     Response response =
         given()
         .contentType("application/json")
         .accept("application/json")
-        .body(CrearPagareBody(numeroDiasMenos, eliminarCampo, nodoAEliminar)).
+        .body(crearPagareBody(numeroDiasMenos, eliminarCampo, nodoAEliminar)).
     when()
         .post(ServicePaths.pathDeceval_crearpagare()).
     then()
@@ -145,11 +145,11 @@ public class DecevalRequest {
     numeroPagareDeceval = response.path("mensajesSalida.numPagareDeceval");
   }
 
-  public void FirmarPagare(int numeroDiasMenos, String numeroPagare) throws IOException {
+  public void firmarPagare(int numeroDiasMenos, String numeroPagare) throws IOException {
     given()
         .contentType("application/json")
         .accept("application/json")
-        .body(FirmaPagareBody(numeroDiasMenos,numeroPagare))
+        .body(firmaPagareBody(numeroDiasMenos,numeroPagare))
         .when().post(ServicePaths.pathDeceval_firmarpagare());
   }
 
@@ -159,6 +159,49 @@ public class DecevalRequest {
               .accept("application/json")
               .body(cancelarPagareBody(numeroDiasMenos,numeroId,eliminarCampo))
               .when().post(ServicePaths.pathDeceval_cancelarPagare());
+  }
+
+  public String cambiarEstadoPagareBody(int numeroDiasMenos, String numeroId, String eliminarCampo){
+
+      JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CambiarEstadoPagare.json", DecevalStaticCode.CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO);
+      jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
+      /*if(numeroId!=null){
+          jObject.put("idDocumentoPagare", numeroId);
+      }else{
+          jObject.put("idDocumentoPagare", numeroPagareDeceval);
+      }*/
+      if(numeroId == null){
+          jObject.put("idDocumentoPagare", numeroPagareDeceval);
+      }else{
+          jObject.put("idDocumentoPagare", numeroId);
+      }
+      System.out.print("**** Valor pagare "+numeroPagareDeceval);
+      String cambiarEstadoPagareBody =   jObject.toString();
+      return  cambiarEstadoPagareBody;
+  }
+
+  public void cambiarEstadoPagare(int numeroDiasMenos, String numeroId, String eliminarCampo) throws IOException{
+      given()
+              .contentType("application/json")
+              .accept("application/json")
+              .body(cambiarEstadoPagareBody(numeroDiasMenos,numeroId,eliminarCampo))
+              .when().post(ServicePaths.pathDecevalCambiarEstadoPagare());
+  }
+
+  public String anularPagareBody(int numeroDiasMenos, String numeroId, String eliminarCampo){
+      JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_AnularPagare.json", DecevalStaticCode.CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO);
+      jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
+      jObject.put("codigoDeceval", numeroPagareDeceval);
+      String cambiarEstadoPagareBody =   jObject.toString();
+      return  cambiarEstadoPagareBody;
+  }
+
+  public void anularPagare(int numeroDiasMenos, String numeroId, String eliminarCampo)  throws IOException{
+      given()
+              .contentType("application/json")
+              .accept("application/json")
+              .body(anularPagareBody(numeroDiasMenos,numeroId,eliminarCampo))
+              .when().post(ServicePaths.pathDecevalAnularPagare());
   }
 
 

@@ -87,12 +87,12 @@ public class SignatureStepsDefinition {
 
     @Then("^la peticion debe ser aprobada$")
     public void Approved_request() {
-        AssertionsUtil.shouldSeeSuccessfulStatusCode();
+        SignatureAssertions.shouldSeeSuccessfulStatusCode00();
     }
 
     @Then("^la peticion debe ser declinada$")
     public void rejected_request() {
-        AssertionsUtil.shouldSeeNotFoundStatusCode();
+        SignatureAssertions.shouldSeeSuccessfulStatusCode500();
     }
 
 }

@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class DecevalStepDefinition {
-  DecevalRequest Request = new DecevalRequest();
+  DecevalRequest request = new DecevalRequest();
 
   @Given("^el usuario solicita consultar pagare sin pdf")
   public void usuario_Nuevo_solicita_consulta_pagare_sin_pdf(){
@@ -22,7 +22,7 @@ public class DecevalStepDefinition {
 
   @When("^el usuario envia la peticion para crear otorgante$")
   public void envia_la_peticion_para_crear_otorgante() throws Throwable {
-    Request.CrearOtorgante(DecevalStaticCode.NUMER_DIAS_IGUAL, null);
+    request.crearOtorgante(DecevalStaticCode.NUMER_DIAS_IGUAL, null);
   }
 
   @And("^si el otorgante ya existe, se actualiza la informacion del mismo$")
@@ -41,44 +41,49 @@ public class DecevalStepDefinition {
   public void usuario_Nuevo_solicita_firmar_pagare(){
   }
 
+  @Given("^el usuario solicita cambiar estado pagare$")
+  public void el_usuario_solicita_cambiar_estado_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
 
   @When("^se envia la peticion de consulta sin pdf a deceval$")
   public void envia_la_peticion_de_consulta_sin_pdf_a_deceval() throws Throwable {
-    Request.ConsultaPagareSinPdf(DecevalStaticCode.NUMER_DIAS_IGUAL);
+    request.consultaPagareSinPdf(DecevalStaticCode.NUMER_DIAS_IGUAL);
   }
 
   @When("^se envia la peticion de consulta con pdf a deceval$")
   public void envia_la_peticion_de_consulta_con_pdf_a_deceval() throws Throwable {
-    Request.ConsultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,null, null);
+    request.consultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,null, null);
   }
 
   @When("^se envia la peticion para crear pagare en deceval")
   public void envia_la_peticion_para_crear_pagare() throws Throwable {
-    Request.CrearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null, "");
+    request.crearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null, "");
   }
 
   @Then("^el resultado de la solicitud de creacion de pagare debe ser aprobada")
   public void el_resultado_de_la_solicitud_de_creacion_de_pagare_debe_ser_aprobada() {
-    DecevalAssertion.Consultaaprobada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.consultaAprobada(DecevalStaticCode.CODE_PAGARE);
   }
 
   @When("^envia la peticion para firmar pagare en deceval")
   public void envia_la_peticion_para_firmar_pagare() throws Throwable {
-    Request.FirmarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null);
+    request.firmarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null);
   }
 
   @Then("^la solicitud de creacion nuevo otorgante debe ser aprobada")
   public void la_consulta_debe_ser_aprobada_otorgante() {
-    DecevalAssertion.Consultaaprobada(DecevalStaticCode.CODE_OTORGANTE);
+    DecevalAssertion.consultaAprobada(DecevalStaticCode.CODE_OTORGANTE);
   }
 
   @Then("^el servicio retorna pagare con pdf")
   public void la_consulta_debe_ser_aprobada_pagare() {
-    DecevalAssertion.Consultaaprobada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.consultaAprobada(DecevalStaticCode.CODE_PAGARE);
   }
   @Then("^el servicio retorna pagare sin pdf")
   public void el_servicio_retorna_pagare_sin_pdf() {
-    DecevalAssertion.Consultaaprobada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.consultaAprobada(DecevalStaticCode.CODE_PAGARE);
   }
 
   @Then("^la firma debe ser aprobada")
@@ -88,7 +93,7 @@ public class DecevalStepDefinition {
 
   @Then("^la consulta debe ser rechazada$")
   public void la_consulta_debe_ser_rechazada() {
-    DecevalAssertion.Consultarechazada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.consultarechazada(DecevalStaticCode.CODE_PAGARE);
   }
 
 
@@ -101,7 +106,7 @@ public class DecevalStepDefinition {
   @When("^usuario envia solicitud crear nuevo otorgante$")
   public void usuario_envia_solicitud_crear_nuevo_otorgante() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    Request.CrearOtorgante(DecevalStaticCode.NUMERO_DIAS_MAS, null);
+    request.crearOtorgante(DecevalStaticCode.NUMERO_DIAS_MAS, null);
   }
 
   @Then("^la solicitud es rechazada por fecha de transaccion incorrecta$")
@@ -117,7 +122,7 @@ public class DecevalStepDefinition {
 
   @When("^usuario envia solicitud de crear nuevo otorgante sin el numero documento$")
   public void usuario_envia_solicitud_crear_nuevo_otorgante_sin_algun_campo_obligatorio() throws Throwable {
-    Request.CrearOtorgante(DecevalStaticCode.NUMER_DIAS_IGUAL, DecevalStaticCode.COD_ELIMINAR_NODO);
+    request.crearOtorgante(DecevalStaticCode.NUMER_DIAS_IGUAL, DecevalStaticCode.COD_ELIMINAR_NODO);
   }
 
   @Then("^la solicitud es rechazada indicando el error en el header$")
@@ -139,7 +144,7 @@ public class DecevalStepDefinition {
   public void usuario_envia_solicitud_consulta_pagare_con_pdf() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
     String numeroId = "1999";
-    Request.ConsultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,numeroId,null);
+    request.consultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,numeroId,null);
   }
 
   @Then("^el servicio debe responder no existe pagare asociado al id ingresado$")
@@ -161,7 +166,7 @@ public class DecevalStepDefinition {
   @When("^usuario envia solicitud consulta pagare con pdf con fecha transaccion incorrecta$")
   public void usuario_envia_solicitud_consulta_pagare_con_pdf_con_fecha_hoy_incorrecta() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    Request.ConsultaPagareConPdf(DecevalStaticCode.NUMERO_DIAS_MAS,null,null);
+    request.consultaPagareConPdf(DecevalStaticCode.NUMERO_DIAS_MAS,null,null);
   }
 
   @Then("^el servicio debe responder error en fecha de transaccion$")
@@ -182,7 +187,7 @@ public class DecevalStepDefinition {
   @When("^usuario envia solicitud de consulta pagare sin campo codigo pagare$")
   public void usuario_envia_solicitud_de_consulta_pagare_sin_campo_pagare() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    Request.ConsultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,null,DecevalStaticCode.COD_ELIMINAR_NODO);
+    request.consultaPagareConPdf(DecevalStaticCode.NUMER_DIAS_IGUAL,null,DecevalStaticCode.COD_ELIMINAR_NODO);
   }
 
   @Then("^la solicitud es rechazada indicando que el codigo pagare es requerido$")
@@ -198,7 +203,7 @@ public class DecevalStepDefinition {
 
   @When("^el usuario envia la peticion para crear pagare sin cuenta otorgante$")
   public void el_usuario_envia_la_peticion_para_crear_pagare_sin_cuenta_otorgante() throws Throwable {
-    Request.CrearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,DecevalStaticCode.COD_ELIMINAR_NODO, DecevalStaticCode.CREAR_PAGARE_POSICION_CUENTA_OTORGANTE);
+    request.crearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,DecevalStaticCode.COD_ELIMINAR_NODO, DecevalStaticCode.CREAR_PAGARE_POSICION_CUENTA_OTORGANTE);
 
   }
 
@@ -217,13 +222,13 @@ public class DecevalStepDefinition {
   @When("^envia la peticion de crear pagare sin el numero pagare de la entidad$")
   public void envia_la_peticion_crear_pagare_sin_numero_pagare() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    Request.CrearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,DecevalStaticCode.COD_ELIMINAR_NODO, DecevalStaticCode.CREAR_PAGARE_POSICION_NUM_PAGARE_ENTIDAD);
+    request.crearPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,DecevalStaticCode.COD_ELIMINAR_NODO, DecevalStaticCode.CREAR_PAGARE_POSICION_NUM_PAGARE_ENTIDAD);
   }
 
   @Then("^el servicio genera error en la creacion de pagare$")
   public void el_servicio_debe_generar_error_en_la_creacion_de_pagare() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.Consultarechazada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.consultarechazada(DecevalStaticCode.CODE_PAGARE);
   }
 
   @Given("^el usuario desea firmar un pagare con un codigo inexistente$")
@@ -234,13 +239,13 @@ public class DecevalStepDefinition {
   @When("^envia la peticion firmar pagare con codigo inexistente$")
   public void envia_la_peticion_firmar_pagare_con_id() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    Request.FirmarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, "XXXX");
+    request.firmarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, "XXXX");
   }
 
   @Then("^el servicio debe generar error codigo pagare no existe$")
   public void el_servicio_debe_generar_error_id_pagare_no_existe() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.Consultarechazada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.consultarechazada(DecevalStaticCode.CODE_PAGARE);
   }
 
 
@@ -255,7 +260,7 @@ public class DecevalStepDefinition {
   @When("^envia la peticion de cancelar pagare con codigo existente$")
   public void envia_la_peticion_de_cancelar_pagare_con_id_existente() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    Request.cancelarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, null, null);
+    request.cancelarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, null, null);
   }
 
   @Then("^el servicio debe respoder error de amortización ya que no existe cambio de esta previo$")
@@ -264,7 +269,38 @@ public class DecevalStepDefinition {
   }
 
 
+  /**
+   * Usuario solicita cambiar estado de pagare
+   */
 
 
+  @When("^el usuario envia la peticion de cambiar estado pagare$")
+  public void el_usuario_envia_la_peticion_de_cambiar_estado_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    request.cambiarEstadoPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null,null);
+  }
+
+  @Then("^el servicio debe responder cambio de estado exitoso$")
+  public void el_servicio_debe_responder_cambio_de_estado_exitoso() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_CAMBIO_ESTADO_PAGARE_OK);
+  }
+
+  @Given("^el usuario solicita anular un pagare$")
+  public void el_usuario_solicita_anular_un_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^el usuario envia la peticion de anulacion para un pagare$")
+  public void el_usuario_envia_la_peticion_de_anulacion_para_un_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    request.anularPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null,null);
+  }
+
+  @Then("^el servicio debe responder la anulacion de pagare fue exitoso$")
+  public void el_servicio_debe_responder_la_anulacion_de_pagare_fue_exitoso() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_ANULACION_PAGARE_OK);
+  }
 
 }
