@@ -92,7 +92,11 @@ public class DecevalRequest {
   public String cancelarPagareBody(int numeroDiasMenos, String numeroId, String eliminarCampo){
       JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CancelarPagare.json", DecevalStaticCode.CANCELAR_PAGARE_NUM_PAGARE);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
-      jObject.put(DecevalStaticCode.CANCELAR_PAGARE_NUM_PAGARE, numeroPagareDeceval);
+      if(numeroId!=null){
+          jObject.put("idDocumentoPagare_DocPag",numeroId);
+      }else{
+          jObject.put(DecevalStaticCode.CANCELAR_PAGARE_NUM_PAGARE, numeroPagareDeceval);
+      }
       return jObject.toString();
   }
 
@@ -142,7 +146,11 @@ public class DecevalRequest {
         .contentType("application/json").
     extract()
         .response();
-    numeroPagareDeceval = response.path("mensajesSalida.numPagareDeceval");
+    String responseNumeroPagareDeval = response.path("mensajesSalida.numPagareDeceval");
+    if(responseNumeroPagareDeval!=null && !responseNumeroPagareDeval.equals("")){
+        numeroPagareDeceval = responseNumeroPagareDeval;
+    }
+
   }
 
   public void firmarPagare(int numeroDiasMenos, String numeroPagare) throws IOException {
@@ -165,16 +173,7 @@ public class DecevalRequest {
 
       JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CambiarEstadoPagare.json", DecevalStaticCode.CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
-      /*if(numeroId!=null){
-          jObject.put("idDocumentoPagare", numeroId);
-      }else{
-          jObject.put("idDocumentoPagare", numeroPagareDeceval);
-      }*/
-      if(numeroId == null){
-          jObject.put("idDocumentoPagare", numeroPagareDeceval);
-      }else{
-          jObject.put("idDocumentoPagare", numeroId);
-      }
+      jObject.put("idDocumentoPagare",numeroPagareDeceval);
       System.out.print("**** Valor pagare "+numeroPagareDeceval);
       String cambiarEstadoPagareBody =   jObject.toString();
       return  cambiarEstadoPagareBody;
@@ -191,7 +190,11 @@ public class DecevalRequest {
   public String anularPagareBody(int numeroDiasMenos, String numeroId, String eliminarCampo){
       JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_AnularPagare.json", DecevalStaticCode.CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
-      jObject.put("codigoDeceval", numeroPagareDeceval);
+      if(numeroId!=null){
+          jObject.put("codigoDeceval",numeroId);
+      }else{
+          jObject.put("codigoDeceval", numeroPagareDeceval);
+      }
       String cambiarEstadoPagareBody =   jObject.toString();
       return  cambiarEstadoPagareBody;
   }

@@ -79,7 +79,7 @@ public class DecevalStepDefinition {
 
   @Then("^el servicio retorna pagare con pdf")
   public void la_consulta_debe_ser_aprobada_pagare() {
-    DecevalAssertion.consultaAprobada(DecevalStaticCode.CODE_PAGARE);
+    DecevalAssertion.consultaAprobada(DecevalStaticCode.COD_ESTADO);
   }
   @Then("^el servicio retorna pagare sin pdf")
   public void el_servicio_retorna_pagare_sin_pdf() {
@@ -150,7 +150,7 @@ public class DecevalStepDefinition {
   @Then("^el servicio debe responder no existe pagare asociado al id ingresado$")
   public void el_servicio_debe_responder_no_existe_id_pagare() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE, DecevalStaticCode.COD_RSPTA_NO_EXISTE_INFO);
+    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.COD_ESTADO, DecevalStaticCode.COD_RSPTA_NO_EXISTE_INFO);
   }
 
 
@@ -172,7 +172,7 @@ public class DecevalStepDefinition {
   @Then("^el servicio debe responder error en fecha de transaccion$")
   public void el_servicio_debe_responder_error_en_fecha_hoy() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE, DecevalStaticCode.COD_RSPTA_CONSULTA_RECHAZADA);
+    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.COD_ESTADO, DecevalStaticCode.COD_RSPTA_CONSULTA_RECHAZADA);
   }
 
   /**
@@ -193,7 +193,7 @@ public class DecevalStepDefinition {
   @Then("^la solicitud es rechazada indicando que el codigo pagare es requerido$")
   public void la_solicitud_es_rechazada_indicando_pagare_requerido() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.CODE_PAGARE, DecevalStaticCode.COD_RSPTA_CONSULTA_PAGARE_REQUERIDO);
+    DecevalAssertion.assertionConsultaPdfRechazada(DecevalStaticCode.COD_ESTADO, DecevalStaticCode.COD_RSPTA_CONSULTA_PAGARE_REQUERIDO);
   }
 
   @Given("^el usuario solicita crear un pagare sin conocer la cuenta otorgante$")
@@ -300,7 +300,47 @@ public class DecevalStepDefinition {
   @Then("^el servicio debe responder la anulacion de pagare fue exitoso$")
   public void el_servicio_debe_responder_la_anulacion_de_pagare_fue_exitoso() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_ANULACION_PAGARE_OK);
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_ERROR, DecevalStaticCode.COD_ANULACION_PAGARE_OK);
+  }
+
+
+  @Given("^el usuario solicita cancelar un pagare con un codigo inexistente$")
+  public void el_usuario_solicita_cancelar_un_pagare_con_un_codigo_inexistente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^envia la peticion de cancelar pagare con un codigo erroneo$")
+  public void envia_la_peticion_de_cancelar_pagare_con_un_codigo_erroneo() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    request.cancelarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, "XXX", null);
+  }
+
+  @Then("^el servicio debe responder error pagare inexistente$")
+  public void el_servicio_debe_responder_error_pagare_inexistente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_ERROR_CANCELAR_PAGARE);
+  }
+
+
+  /**
+   * Anulacion de pagare
+   */
+
+  @Given("^el usuario solicita anular un pagare enviando un codigo pagare inexistente$")
+  public void el_usuario_solicita_anular_un_pagare_enviando_un_codigo_pagare_inexistente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^el usuario envia la peticion de anulacion para un pagare inexistente$")
+  public void el_usuario_envia_la_peticion_de_anulacion_para_un_pagare_inexistente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    request.anularPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, "XXXX", null);
+  }
+
+  @Then("^el servicio debe responder error en la anulacion el pagare no existe$")
+  public void el_servicio_debe_responder_error_en_la_anulacion_el_pagare_no_existe() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_ERROR_ANULAR_PAGARE);
   }
 
 }
