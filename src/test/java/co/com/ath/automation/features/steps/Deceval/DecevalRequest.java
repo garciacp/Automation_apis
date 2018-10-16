@@ -173,7 +173,11 @@ public class DecevalRequest {
 
       JSONObject jObject  = functionsUtils.getJsonFinal(eliminarCampo, "json/Deceval_CambiarEstadoPagare.json", DecevalStaticCode.CREAR_OTORGANTE_POSICION_NUM_DOCUMENTO);
       jObject.put("fechahoy",functionsUtils.getDateToday(numeroDiasMenos));
-      jObject.put("idDocumentoPagare",numeroPagareDeceval);
+      if(numeroId!=null){
+          jObject.put("idDocumentoPagare",numeroId);
+      }else{
+          jObject.put("idDocumentoPagare",numeroPagareDeceval);
+      }
       System.out.print("**** Valor pagare "+numeroPagareDeceval);
       String cambiarEstadoPagareBody =   jObject.toString();
       return  cambiarEstadoPagareBody;

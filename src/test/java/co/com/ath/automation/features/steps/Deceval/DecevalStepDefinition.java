@@ -263,9 +263,10 @@ public class DecevalStepDefinition {
     request.cancelarPagare(DecevalStaticCode.NUMER_DIAS_IGUAL, null, null);
   }
 
-  @Then("^el servicio debe respoder error de amortización ya que no existe cambio de esta previo$")
+  @Then("^el servicio debe respoder pagare cancelado$")
   public void el_servicio_debe_respoder_con_la_cancelacion_del_pagare_exitoso() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_ANULACION_PAGARE_OK);
   }
 
 
@@ -291,6 +292,46 @@ public class DecevalStepDefinition {
     // Write code here that turns the phrase above into concrete actions
   }
 
+  @Given("^el usuario solicita cambiar estado pagare, pero envia un codigo inexistente$")
+  public void el_usuario_solicita_cambiar_estado_pagare_pero_envia_un_codigo_inexistente() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^el usuario envia la peticion de cambiar estado pagare con codigo pagare$")
+  public void el_usuario_envia_la_peticion_de_cambiar_estado_pagare_con_codigo_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    request.cambiarEstadoPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null,null);
+  }
+
+  @Then("^el servicio debe responder error en el cambio de estado del pagare$")
+  public void el_servicio_debe_responder_error_en_el_cambio_de_estado_del_pagare() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+
+  @Given("^el usuario solicita cambiar estado pagare que no esta en estado provisional$")
+  public void el_usuario_solicita_cambiar_estado_pagare_que_no_esta_en_estado_provisional() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+  }
+
+  @When("^el usuario envia la peticion de cambiar estado pagare en estado provisional$")
+  public void el_usuario_envia_la_peticion_de_cambiar_estado_pagare_en_estado_provisional() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    request.cambiarEstadoPagare(DecevalStaticCode.NUMER_DIAS_IGUAL,null,null);
+  }
+
+  @Then("^el servicio debe responder error, el pagare no se encuentra en estado provisional$")
+  public void el_servicio_debe_responder_error_el_pagare_no_se_encuentra_en_estado_provisional() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_PAGARE_SIN_ESTADO_PROVISIONAL);
+  }
+
+
+
+  /**
+   * Usuario solicita anulacion de pagare
+   * @throws Throwable
+   */
   @When("^el usuario envia la peticion de anulacion para un pagare$")
   public void el_usuario_envia_la_peticion_de_anulacion_para_un_pagare() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
