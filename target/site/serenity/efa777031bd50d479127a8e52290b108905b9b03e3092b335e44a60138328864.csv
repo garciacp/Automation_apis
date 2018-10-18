@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Autenticacion","un usuario/a con dato seguro Aval solicita ser autenticado/a en un banco Aval","SUCCESS","15:25:44","0.0","40.56"
-"Autenticacion","un usuario/a registrado en datacredito desea ser validado en un banco aval","FAILURE","15:26:27","0.0","6.47"
-"Autenticacion","un usuario/a registrado en cifin desea ser validado en un banco aval","FAILURE","15:26:34","0.0","3.47"

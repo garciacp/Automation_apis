@@ -3,7 +3,7 @@ Feature: Autenticacion
   yo como cliente que poseo productos en alguno de los bancos del grupo aval
   Quiero ser autenticado en un portal de los bancos del grupo aval
 
-  @Autenticacion
+  @autenticacion
   Scenario Outline: un usuario/a con dato seguro Aval solicita ser autenticado/a en un banco Aval
     Given un usuario con datos seguro en <dato seguro> solicita autenticacion en el banco <banco>
     When el envia la peticion para ser autenticado

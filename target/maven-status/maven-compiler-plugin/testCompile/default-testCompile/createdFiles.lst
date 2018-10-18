@@ -1,8 +1,0 @@
-co/com/ath/automation/features/steps/signature/SignatureAssertions.class
-co/com/ath/automation/features/steps/Authentication/AuthenticationStepsDefinition.class
-co/com/ath/automation/features/steps/signature/SignatureStepsDefinition.class
-co/com/ath/automation/features/steps/Authentication/AuthenticationRequests.class
-co/com/ath/automation/features/Runner.class
-co/com/ath/automation/features/steps/Authentication/AuthenticationAssertions.class
-co/com/ath/automation/utils/AssertionsUtil.class
-co/com/ath/automation/features/steps/signature/SignatureRequests.class
