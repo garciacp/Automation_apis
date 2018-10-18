@@ -8,12 +8,6 @@ import org.openqa.selenium.WebDriver;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-<<<<<<< HEAD
     features = "src/test/resources/features/")
-=======
-    features = "src/test/resources/features/", tags = "@CrearOtorganteCedulaIncorrecta")
->>>>>>> ad880ab25e19d497f27a924c39831a9097ebdddc
 public class Runner {
-    @Managed(driver = "chrome")
-    WebDriver driver;
 }

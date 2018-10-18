@@ -16,17 +16,9 @@ public class AuthenticationRequests {
 
   private static Environment environment;
 
-<<<<<<< HEAD
   static {
     environment = ConfigFactory.create(Environment.class);
   }
-=======
-    final static Logger logger = Logger.getLogger(AuthenticationRequests.class);
-
-    static {
-        environment = ConfigFactory.create(Environment.class);
-    }
->>>>>>> ad880ab25e19d497f27a924c39831a9097ebdddc
 
 
   public String authenticationBody(int identSerialNum, String otpType, String Phone) {
@@ -50,29 +42,8 @@ public class AuthenticationRequests {
       String jsonModify = jObject.toString();
       return jsonModify;
 
-<<<<<<< HEAD
     } catch (IOException e) {
       throw new RuntimeException("Error reading file");
-=======
-    public void Authentication(int IdentSerialNum, String bankid, String body) throws IOException {
-        Random numeroRandom = new Random();
-        int XRqUID = numeroRandom.nextInt(999999-100000+1) + 100000;
-        System.out.print("**** Autenticacion *** "+ServicePaths.pathAuthentication());
-        given()
-            .contentType("application/json")
-            .header("X-RqUID", XRqUID).relaxedHTTPSValidation()
-            .header("X-Channel", "ADL").relaxedHTTPSValidation()
-            .header("X-BankId", bankid).relaxedHTTPSValidation()
-            .header("X-IdentSerialNum", IdentSerialNum).relaxedHTTPSValidation()
-            .header("X-IPAddr", "127.0.0.1").relaxedHTTPSValidation()
-            .header("X-Sesskey", "sessionKey").relaxedHTTPSValidation()
-            .header("X-OperationName", "Post").relaxedHTTPSValidation()
-            .header("X-ServiceName", "Authentication").relaxedHTTPSValidation()
-            .header("X-Backend", "ElectronicSigInq").relaxedHTTPSValidation()
-            .accept("application/json")
-            .body(body)
-            .when().post(ServicePaths.pathAuthentication());
->>>>>>> ad880ab25e19d497f27a924c39831a9097ebdddc
     }
   }
 
