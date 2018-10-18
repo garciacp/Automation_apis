@@ -15,11 +15,11 @@ public class ServicePaths {
   }
 
   public static URL pathSignDocument() throws MalformedURLException {
-    return new URL(environment.datapower() + environment.url_signature_6());
+    return new URL(environment.datapower() + environment.urlSignatureV6());
   }
 
   public static URL pathAuthentication() throws MalformedURLException {
-    return new URL(environment.datapower() + environment.url_authentication_v7());
+    return new URL(environment.datapower() + environment.urlAuthenticationV7());
   }
 
   public static URL pathDeceval_consultaSinPdf() throws MalformedURLException {
@@ -53,5 +53,6 @@ public class ServicePaths {
   public static URL pathDecevalAnularPagare() throws MalformedURLException {
     return new URL(environment.urlAnularPagare());
   }
+
 
 }

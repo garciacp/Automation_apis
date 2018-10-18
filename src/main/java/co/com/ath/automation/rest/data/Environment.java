@@ -6,16 +6,19 @@ import org.aeonbits.owner.Config;
 
 public interface Environment extends Config {
 
-  @DefaultValue("999999")
-  String url_signature_2();
+  String urlSignatureV2();
 
-  String url_signature_6();
+  String urlSignatureV6();
 
-  String url_authentication_v2();
+  String urlAuthenticationV2();
 
-  String url_authentication_v5();
+  String urlAuthenticationV5();
 
-  String url_PagareDeceval();
+  String urlAuthenticationV7();
+
+  String url_cancelarPagareDeceval();
+
+  String urlCambiarEstadoPagare();
 
   String url_ConsultaPagareDecevalSinPdf();
 
@@ -27,47 +30,44 @@ public interface Environment extends Config {
 
   String url_firmarPagareDeceval();
 
+  String urlAnularPagare();
+
   String datapower();
 
   String core();
 
-  
-
   String BankidVillas();
 
-  String BankidPopular();
+  String bankIdVillas();
 
-  String BankidOccidente();
 
-  String OtpTypeVillas();
+  String bankIdPopular();
 
-  String OtpTypePopular();
+  String bankIdOccidente();
 
-  String OtpTypeOccidente();
+  String otpTypeVillas();
 
-  String url_cancelarPagareDeceval();
+  String otpTypePopular();
 
-  String url_authentication_v7();
+  String otpTypeOccidente();
 
-  int datoseguro_rojo();
+  int datoSeguroRojo();
 
-  int datoseguro_rojo_verde();
+  int datoSeguroRojoVerde();
 
-  int datoseguro_rojo_azul();
+  int datoSeguroRojoAzul();
 
-  int datoseguro_rojo_verde_azul();
+  int datoSeguroRojoVerdeAzul();
 
-  int datoseguro_verde();
+  int datoSeguroVerde();
 
-  int datoseguro_verde_azul();
+  int datoSeguroVerdeAzul();
 
-  int datoseguro_azul();
+  int datoSeguroAzul();
 
-  int datoseguro_cifin();
+  int datoSeguroCifin();
 
-  String urlCambiarEstadoPagare();
-
-  String urlAnularPagare();
+  int datoSeguroDatacredito();
 
 }
 

@@ -1,18 +1,18 @@
 {
   "govIssueIdent": {
     "govIssueIdentType": "CC",
-    "identSerialNum": "10301648",
+    "identSerialNum": "43541927",
     "govOrg": "string",
     "govOrgName": "string",
     "govRank": "string",
-    "stateProv": "11001",
+    "stateProv": "string",
     "country": "string",
     "desc": "string",
     "issDt": "2018-07-27T19:56:26.781Z",
     "expDt": "2018-07-27T19:56:26.781Z"
   },
   "personName": {
-    "lastName": "Pino",
+    "lastName": "FORERO",
     "firstName": "Luz",
     "middleName": "Adriana",
     "titlePrefix": "string",
@@ -53,17 +53,17 @@
       "branchId": "string",
       "branchName": "string",
       "postAddr": {
-        "addr1": "string",
-        "addr2": "string",
-        "addr3": "string",
-        "addr4": "string",
+        "Addr1": "string",
+        "Addr2": "string",
+        "Addr3": "string",
+        "Addr4": "string",
         "city": "string",
         "stateProv": "string",
-        "postalCode": 0,
-        "country": "string",
-        "addrType": "string",
-        "startDt": "2018-07-27T19:56:26.781Z",
-        "endDt": "2018-07-27T19:56:26.781Z"
+        "PostalCode": 0,
+        "Country": "string",
+        "AddrType": "string",
+        "StartDt": "2018-07-27T19:56:26.781Z",
+        "EndDt": "2018-07-27T19:56:26.781Z"
       },
       "city": "string",
       "stateProv": "string",
@@ -72,11 +72,11 @@
     }
   },
   "depAcctId": {
-    "acctId": "string",
-    "acctType": "DDA",
-    "acctKey": "string",
-    "acctCur": "string",
-    "bankInfo": {
+    "AcctId": "string",
+    "AcctType": "DDA",
+    "AcctKey": "string",
+    "AcctCur": "string",
+    "BankInfo": {
       "bankIdType": "string",
       "bankId": 0,
       "refInfo": {
@@ -87,17 +87,17 @@
       "branchId": "string",
       "branchName": "string",
       "postAddr": {
-        "addr1": "string",
-        "addr2": "string",
-        "addr3": "string",
-        "addr4": "string",
+        "Addr1": "string",
+        "Addr2": "string",
+        "Addr3": "string",
+        "Addr4": "string",
         "city": "string",
         "stateProv": "string",
-        "postalCode": 0,
-        "country": "string",
-        "addrType": "string",
-        "startDt": "2018-07-27T19:56:26.781Z",
-        "endDt": "2018-07-27T19:56:26.781Z"
+        "PostalCode": 0,
+        "Country": "string",
+        "AddrType": "string",
+        "StartDt": "2018-07-27T19:56:26.781Z",
+        "EndDt": "2018-07-27T19:56:26.781Z"
       },
       "city": "string",
       "stateProv": "string",
@@ -108,9 +108,9 @@
   "cardAcctId": {
     "acctId": "string",
     "cardMagData": {
-      "magData1": "string",
-      "magData2": "string",
-      "magData3": "string"
+      "MagData1": "string",
+      "MagData2": "string",
+      "MagData3": "string"
     },
     "acctType": "DDA",
     "CCMotoAcct": {
@@ -123,7 +123,7 @@
         "Addr3": "string",
         "Addr4": "string",
         "city": "string",
-        "StateProv": "string",
+        "stateProv": "string",
         "PostalCode": 0,
         "Country": "string",
         "AddrType": "string",
@@ -145,10 +145,10 @@
     "otpNum": "string",
     "channel": "string",
     "amt": "string",
-    "desc": "Otp :",
+    "desc": "su  otp fue generada:",
     "validity": {
       "validityPeriod": "Año",
-      "validityTime": 0
+      "ValidityTime": 0
     }
   },
   "contactInfo": {
@@ -157,23 +157,23 @@
     "prefTimeEnd": "2018-07-27T19:56:26.781Z",
     "phoneNum": {
       "phoneType": "string",
-      "phone": "3125035136"
+      "phone": 3152025341
     },
     "contactName": "string",
     "emailAddr": "string",
-    "uRL": "string",
+    "url": "string",
     "postAddr": {
-      "addr1": "string",
-      "addr2": "string",
-      "addr3": "string",
-      "addr4": "string",
+      "Addr1": "string",
+      "Addr2": "string",
+      "Addr3": "string",
+      "Addr4": "string",
       "city": "string",
       "stateProv": "string",
-      "postalCode": 0,
-      "country": "string",
-      "addrType": "string",
-      "startDt": "2018-07-27T19:56:26.782Z",
-      "endDt": "2018-07-27T19:56:26.782Z"
+      "PostalCode": 0,
+      "Country": "string",
+      "AddrType": "string",
+      "StartDt": "2018-07-27T19:56:26.782Z",
+      "EndDt": "2018-07-27T19:56:26.782Z"
     }
   },
   "creditAnalysis": {
