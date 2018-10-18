@@ -1,13 +1,13 @@
 Feature: Firma Pagare Deceval
   #Caso 1
-  @Deceval @ConsultaPagare
+  @Deceval @ConsultaPagare @Basico
     Scenario: un usuaro registrado desea visualizar un pagare sin que sea pdf
       Given el usuario solicita consultar pagare sin pdf
       When se envia la peticion de consulta sin pdf a deceval
       Then el servicio retorna pagare sin pdf
 
   #Caso 2
-  @Deceval @ConsultaPagare
+  @Deceval @ConsultaPagare @Basico
     Scenario: un usuario registrado desea consultar un pagare en deceval en formato pdf
       Given el usuario solicita consultar pagare con pdf
       When se envia la peticion de consulta con pdf a deceval
@@ -27,7 +27,7 @@ Feature: Firma Pagare Deceval
       Given el usuario solicita crear pagare
       When se envia la peticion para crear pagare en deceval
       Then el resultado de la solicitud de creacion de pagare debe ser aprobada
-
+  #Caso 5
   @Deceval @Firmarpagare @Basico
     Scenario: un usuario desea firmar un pagare en deceval
       Given usuario necesita firmar el pagare creado anteriomente
@@ -35,13 +35,13 @@ Feature: Firma Pagare Deceval
       Then la firma debe ser aprobada
 
   #Historias de usuario para creacion otorgante
-
+  #Caso 6
   @Deceval @CrearOtorgante
     Scenario: un usuario desea crear nuevo otorgante, pero envia fecha transaccion incorrecta
         Given el usuario solicita crear nuevo otorgante con fecha transaccion incorrecta
         When usuario envia solicitud crear nuevo otorgante
         Then la solicitud es rechazada por fecha de transaccion incorrecta
-
+  #Caso 7
   @Deceval @CrearOtorgante
     Scenario: un usuario desea crear nuevo otorgante pero sin numero de documento
         Given el usuario solicita crear nuevo otorgante sin numero de documento
@@ -49,12 +49,13 @@ Feature: Firma Pagare Deceval
         Then la solicitud es rechazada indicando el error en el header
 
   #Historias de usuario consulta con pdf
+  #Caso 8
   @Deceval @ConsultaPagare
-    Scenario: usuario desea consultar un pagare en formato pdf, enviando un id de pagaré que no es existente en deceval
+    Scenario: un usuario desea consultar un pagare en formato pdf, enviando un id de pagaré que no es existente en deceval
         Given usuario envia solicitud con un id pagare inexistente en deceval
         When usuario envia solicitud consulta pagare con pdf
         Then el servicio debe responder no existe pagare asociado al id ingresado
-
+  #Caso 9
   @Deceval @ConsultaPagare
     Scenario: un usuario desea consultar un pagare en deceval, enviando la fecha de transaccion incorrecta
         Given usuario desea consultar pagare con de transaccion diferente a hoy
@@ -90,25 +91,25 @@ Feature: Firma Pagare Deceval
 
   #Historias de usurio cambiar estado pagare
   @Deceval @CambiarEstadoPagare @Basico
-    Scenario: usuario desea crear el cambio el estado de un pagare
+    Scenario: un usuario desea cambiar el estado de un pagare
         Given el usuario solicita cambiar estado pagare
         When el usuario envia la peticion de cambiar estado pagare
         Then el servicio debe responder cambio de estado exitoso
 
   @Deceval @CambiarEstadoPagare @Nuevo
-      Scenario: usuario desea crear el cambio el estado de un pagare, enviando un codigo inexistente
+      Scenario: un suario desea cambiar el estado de un pagare, enviando un codigo inexistente
           Given el usuario solicita cambiar estado pagare, pero envia un codigo inexistente
           When el usuario envia la peticion de cambiar estado pagare con codigo pagare
           Then el servicio debe responder error en el cambio de estado del pagare
 
   @Deceval @CambiarEstadoPagare @Nuevo
-      Scenario: usuario desea crear el cambio el estado de un pagare que no esta en estado provisional
+      Scenario: un usuario desea cambiar el estado de un pagare que no esta en estado provisional
           Given el usuario solicita cambiar estado pagare que no esta en estado provisional
           When el usuario envia la peticion de cambiar estado pagare en estado provisional
           Then el servicio debe responder error, el pagare no se encuentra en estado provisional
 
   #Historias de usuario anulacion de pagare
-  @Deceval
+  @Deceval @Basico
     Scenario: un usuario desea registar la anulacion del un pagare
         Given el usuario solicita anular un pagare
         When el usuario envia la peticion de anulacion para un pagare
@@ -127,7 +128,7 @@ Feature: Firma Pagare Deceval
         When envia la peticion de cancelar pagare con codigo existente
         Then el servicio debe respoder pagare cancelado
 
-  @Deceval @CancelarPagare @Basico
+  @Deceval @CancelarPagare
     Scenario: un usuario desea cancelar un pagare, pero envia un codigo pagare inexistente
         Given el usuario solicita cancelar un pagare con un codigo inexistente
         When envia la peticion de cancelar pagare con un codigo erroneo
