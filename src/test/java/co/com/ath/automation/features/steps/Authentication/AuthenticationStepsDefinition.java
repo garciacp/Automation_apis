@@ -20,29 +20,31 @@ public class AuthenticationStepsDefinition {
   String BankId;
   String TypeTx;
 
-  @Given("^dato seguro en \"([^\"]*)\" solicita autenticacion en \"([^\"]*)\"$")
-  public void User_request_bank(String DatoSeguro, String Banco) {
+
+  @Given("^un usuario con datos seguro en (.*) solicita autenticacion en el banco (.*)$")
+  public void userRequestAuthentication(String DatoSeguro, String Banco) {
     switch (DatoSeguro) {
       case "rojo":
-        dato_seguro = environment.datoseguro_rojo();
+        System.out.println("entro en 1:");
+        dato_seguro = environment.datoSeguroRojo();
         break;
       case "azul":
-        dato_seguro = environment.datoseguro_azul();
+        dato_seguro = environment.datoSeguroAzul();
         break;
       case "verde":
-        dato_seguro = environment.datoseguro_verde();
+        dato_seguro = environment.datoSeguroVerde();
         break;
       case "rojo - azul":
-        dato_seguro = environment.datoseguro_rojo_azul();
+        dato_seguro = environment.datoSeguroRojoAzul();
         break;
       case "rojo - verde":
-        dato_seguro = environment.datoseguro_rojo_verde();
+        dato_seguro = environment.datoSeguroRojoVerde();
         break;
       case "azul - verde":
-        dato_seguro = environment.datoseguro_verde_azul();
+        dato_seguro = environment.datoSeguroVerdeAzul();
         break;
       case "rojo - azul - verde":
-        dato_seguro = environment.datoseguro_rojo_azul();
+        dato_seguro = environment.datoSeguroRojoVerdeAzul();
         break;
       default:
         dato_seguro = 000000;
@@ -51,230 +53,115 @@ public class AuthenticationStepsDefinition {
 
     switch (Banco) {
       case "rojo":
-        BankId = environment.BankidVillas();
-        TypeTx = environment.OtpTypeVillas();
+
+        BankId = environment.bankIdVillas();
+        TypeTx = environment.otpTypeVillas();
         break;
 
       case "azul":
-        BankId = environment.BankidOccidente();
-        TypeTx = environment.OtpTypeOccidente();
+        BankId = environment.bankIdOccidente();
+        TypeTx = environment.otpTypeOccidente();
         break;
 
       case "verde":
-        BankId = environment.BankidPopular();
-        TypeTx = environment.OtpTypePopular();
+        BankId = environment.bankIdPopular();
+        TypeTx = environment.otpTypePopular();
         break;
 
       default:
         dato_seguro = 9999;
         break;
     }
-    bodyRequest = Request.AuthenticationBody(dato_seguro, TypeTx);
+    bodyRequest = Request.authenticationBody(dato_seguro, TypeTx, "");
   }
 
+  @Given("^un usuario que esta registrado en datacredito solicita validacion en el banco (.*)$")
+  public void userRequestDatacredito(String Banco) {
+    switch (Banco) {
+      case "rojo":
+        BankId = environment.bankIdVillas();
+        TypeTx = environment.otpTypeVillas();
+        break;
 
-  @Given("^dato seguro en rojo solicita producto en azul$")
-  public void User_red_request_product_blue() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo();
-    BankId = environment.BankidOccidente();
+      case "azul":
+        BankId = environment.bankIdOccidente();
+        TypeTx = environment.otpTypeOccidente();
+        break;
+
+      case "verde":
+        BankId = environment.bankIdPopular();
+        TypeTx = environment.otpTypePopular();
+        break;
+
+      default:
+        dato_seguro = 9999;
+        break;
+    }
+    bodyRequest = Request.authenticationBody(environment.datoSeguroDatacredito(), TypeTx, "3005501111");
   }
 
-  @Given("^dato seguro en rojo solicita producto en verde")
-  public void User_red_request_product_green() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo();
-    BankId = environment.BankidPopular();
-  }
+  @Given("^un usuario que esta registrado en cifin solicita validacion en el banco (.*)$")
+  public void userRequestCifin(String Banco) {
+    switch (Banco) {
+      case "rojo":
+        BankId = environment.bankIdVillas();
+        TypeTx = environment.otpTypeVillas();
+        break;
 
-  @Given("^dato seguro en rojo solicita producto en rojo")
-  public void User_red_request_product_red() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo();
-    BankId = environment.BankidVillas();
-  }
+      case "azul":
+        BankId = environment.bankIdOccidente();
+        TypeTx = environment.otpTypeOccidente();
+        break;
 
-  @Given("^dato seguro en rojo y verde solicita producto en rojo")
-  public void User_red_green_request_product_red() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_verde(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo_verde();
-    BankId = environment.BankidVillas();
-  }
+      case "verde":
+        BankId = environment.bankIdPopular();
+        TypeTx = environment.otpTypePopular();
+        break;
 
-  @Given("^dato seguro en rojo y verde solicita producto en verde")
-  public void User_red_green_request_product_green() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_verde(), environment.OtpTypePopular());
-    dato_seguro = environment.datoseguro_rojo_verde();
-    BankId = environment.BankidPopular();
-  }
-
-
-  @Given("^dato seguro en rojo y verde solicita producto en azul")
-  public void User_red_green_request_product_blue() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_verde(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo_verde();
-    BankId = environment.BankidOccidente();
-  }
-
-  @Given("^dato seguro en rojo y azul solicita producto en rojo")
-  public void User_red_blue_request_product_red() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_azul(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo_azul();
-    BankId = environment.BankidVillas();
-  }
-
-  @Given("^dato seguro en rojo y azul solicita producto en verde")
-  public void User_red_blue_request_product_green() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_azul(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo_azul();
-    BankId = environment.BankidPopular();
-  }
-
-  @Given("^dato seguro en rojo y azul solicita producto en azul")
-  public void User_red_blue_request_product_blue() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_azul(), environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_rojo_azul();
-    BankId = environment.BankidOccidente();
-  }
-
-  @Given("^dato seguro en rojo - azul y verde solicita producto en rojo")
-  public void User_red_blue_green_request_product_red() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_verde_azul(), environment.OtpTypeVillas());
-    dato_seguro = environment.datoseguro_rojo_verde_azul();
-    BankId = environment.BankidVillas();
-  }
-
-  @Given("^dato seguro en rojo - azul y verde solicita producto en verde")
-  public void User_red_blue_green_request_product_green() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_rojo_verde_azul(), environment.OtpTypePopular());
-    dato_seguro = environment.datoseguro_rojo_verde_azul();
-    BankId = environment.BankidPopular();
-  }
-
-  @Given("^dato seguro en rojo - azul y verde solicita producto en azul")
-  public void User_red_blue_green_request_product_blue() {
-    bodyRequest = Request.AuthenticationBody(environment.datoseguro_rojo_verde_azul(),
-        environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_rojo_verde_azul();
-    BankId = environment.BankidOccidente();
-  }
-
-  @Given("^dato seguro en verde solicita producto en azul")
-  public void User_green_request_product_blue() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_verde(), environment.OtpTypePopular());
-    dato_seguro = environment.datoseguro_verde();
-    BankId = environment.BankidOccidente();
-  }
-
-  @Given("^dato seguro en verde solicita producto en verde")
-  public void User_green_request_product_green() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_verde(), environment.OtpTypePopular());
-    dato_seguro = environment.datoseguro_verde();
-    BankId = environment.BankidPopular();
-  }
-
-  @Given("^dato seguro en verde solicita producto en rojo")
-  public void User_green_request_product_red() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_verde(), environment.OtpTypePopular());
-    dato_seguro = environment.datoseguro_verde();
-    BankId = environment.BankidVillas();
-  }
-
-  @Given("^dato seguro en verde y azul solicita producto en rojo")
-  public void User_green_blue_request_product_red() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_verde_azul(), environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_verde_azul();
-    BankId = environment.BankidVillas();
-  }
-
-  @Given("^dato seguro en verde y azul solicita producto en verde")
-  public void User_green_blue_request_product_green() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_verde_azul(), environment.OtpTypePopular());
-    dato_seguro = environment.datoseguro_verde_azul();
-    BankId = environment.BankidPopular();
-  }
-
-  @Given("^dato seguro en verde y azul solicita producto en azul")
-  public void User_green_blue_request_product_blue() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_verde_azul(), environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_verde_azul();
-    BankId = environment.BankidOccidente();
-  }
-
-  @Given("^dato seguro en azul solicita producto en rojo")
-  public void User_blue_request_product_red() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_azul(), environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_azul();
-    BankId = environment.BankidVillas();
-  }
-
-  @Given("^dato seguro en azul solicita producto en verde")
-  public void User_blue_request_product_green() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_azul(), environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_azul();
-    BankId = environment.BankidPopular();
-  }
-
-  @Given("^dato seguro en azul solicita producto en azul")
-  public void User_blue_request_product_blue() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_azul(), environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_azul();
-    BankId = environment.BankidOccidente();
-  }
-
-  @Given("^usuario sin dato seguro solicita producto")
-  public void User_new_sin_dato() {
-    bodyRequest = Request
-        .AuthenticationBody(environment.datoseguro_cifin(), environment.OtpTypeOccidente());
-    dato_seguro = environment.datoseguro_cifin();
-    BankId = environment.BankidOccidente();
+      default:
+        dato_seguro = 9999;
+        break;
+    }
+    bodyRequest = Request.authenticationBody(environment.datoSeguroCifin(), TypeTx, "3003590317");
   }
 
 
   @When("^el envia la peticion para ser autenticado$")
-  public void he_sends_the_request_to_enter_authentication() throws Throwable {
-    Request.Authentication(dato_seguro, BankId, bodyRequest);
+  public void sendRequestAuthentication() throws Throwable {
+    Request.authentication(dato_seguro, BankId, bodyRequest);
+  }
+
+  @Then("^La peticion debe ser contestada por el (.*)$")
+  public void requestBankAutorization(String BancoAutorizador) throws Throwable {
+    switch (BancoAutorizador) {
+      case "rojo":
+        AuthenticationAssertions.shouldSeeCodeIdBankRed();
+        break;
+
+      case "azul":
+        AuthenticationAssertions.shouldSeeCodeIdBankBlue();
+        break;
+
+      case "verde":
+        AuthenticationAssertions.shouldSeeCodeIdBankGreen();
+        break;
+
+      default:
+        AuthenticationAssertions.shouldSeeCodeIdBankAval();
+        break;
+
+    }
+  }
+  @Then("^La peticion debe ser contestada por datacredito$")
+  public void requestDatacredito() throws Throwable {
+    AuthenticationAssertions.shouldSeeCodeDatacredito();
+  }
+
+  @Then("^La peticion debe ser contestada por cifin")
+  public void requestCifin() throws Throwable {
+    AuthenticationAssertions.shouldSeeCodeIdBankAval();
   }
 
 
-  @Then("^la peticion debe ser aprobada en rojo$")
-  public void Approved_request_red() {
-    AuthenticationAssertions.shouldSeeSuccessfulStatusCodeVillas();
-  }
-
-  @Then("^la peticion debe ser aprobada en verde$")
-  public void Approved_request_green() {
-    AuthenticationAssertions.shouldSeeSuccessfulStatusCodePopular();
-  }
-
-  @Then("^la peticion debe ser aprobada en azul$")
-  public void Approved_request_blue() {
-    AuthenticationAssertions.shouldSeeSuccessfulStatusCodeOccidente();
-  }
-
-  @Then("^la peticion debe ser aprobada en aval")
-  public void Approved_request_cifin() {
-    AuthenticationAssertions.aceptadaaval();
-  }
 
 }

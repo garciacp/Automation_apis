@@ -1,3 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Autenticacion Andes","usuario con dato seguro en verde y azul solicita producto en verde","FAILURE","09:58:30","0.0","1.75"
-"Autenticacion Andes","usuario sin dato seguro solicita producto","FAILURE","09:58:47","0.0","13.15"
+"Autenticacion","un usuario/a registrado en datacredito desea ser validado en un banco aval","FAILURE","15:26:27","0.0","6.47"
+"Autenticacion","un usuario/a registrado en cifin desea ser validado en un banco aval","FAILURE","15:26:34","0.0","3.47"

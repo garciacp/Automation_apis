@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="4" name="Autenticacion" skipped="0" tests="20" time="50.5" timestamp="2018-10-17T15:25:44.716-05:00[America/Bogota]"><testcase name="un usuario/a con dato seguro Aval solicita ser autenticado/a en un banco Aval"/><testcase name="un usuario/a registrado en datacredito desea ser validado en un banco aval"><failure message="&#10;Expected: &lt;0&gt;&#10;     but: was &lt;500&gt;" type="java.lang.AssertionError">
+Expected: &lt;0&gt;
+     but: was &lt;500&gt;</failure><system-err>
+Expected: &lt;0&gt;
+     but: was &lt;500&gt;
+co.com.ath.automation.features.steps.Authentication.AuthenticationAssertions.shouldSeeCodeDatacredito(AuthenticationAssertions.java:31)
+co.com.ath.automation.features.steps.Authentication.AuthenticationStepsDefinition.requestDatacredito(AuthenticationStepsDefinition.java:157)
+✽.Then La peticion debe ser contestada por datacredito(Authentication.feature:40)
+</system-err></testcase><testcase name="un usuario/a registrado en cifin desea ser validado en un banco aval"><failure message="&#10;Expected: &quot;00010999&quot;&#10;     but: was null" type="java.lang.AssertionError">
+Expected: "00010999"
+     but: was null</failure><system-err>
+Expected: "00010999"
+     but: was null
+co.com.ath.automation.features.steps.Authentication.AuthenticationAssertions.shouldSeeCodeIdBankAval(AuthenticationAssertions.java:26)
+co.com.ath.automation.features.steps.Authentication.AuthenticationStepsDefinition.requestCifin(AuthenticationStepsDefinition.java:162)
+✽.Then La peticion debe ser contestada por cifin(Authentication.feature:52)
+</system-err></testcase></testsuite>

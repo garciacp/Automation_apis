@@ -1,28 +1,52 @@
 -------------------------------------------------------------------------------
 Test set: co.com.ath.automation.features.Runner
 -------------------------------------------------------------------------------
-Tests run: 88, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 123.965 s <<< FAILURE! - in co.com.ath.automation.features.Runner
-Then la peticion debe ser aprobada en verde(Scenario: usuario con dato seguro en verde y azul solicita producto en verde)  Time elapsed: 0.006 s  <<< FAILURE!
+Tests run: 80, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 55.442 s <<< FAILURE! - in co.com.ath.automation.features.Runner
+Then La peticion debe ser contestada por datacredito(| azul |)  Time elapsed: 0.006 s  <<< FAILURE!
 java.lang.AssertionError: 
 
-Expected: <10029>
-     but: was <10236>
+Expected: <0>
+     but: was <500>
 
-Scenario: usuario con dato seguro en verde y azul solicita producto en verde  Time elapsed: 0.006 s  <<< FAILURE!
+| azul |  Time elapsed: 0.006 s  <<< FAILURE!
 java.lang.AssertionError: 
 
-Expected: <10029>
-     but: was <10236>
+Expected: <0>
+     but: was <500>
 
-Then la peticion debe ser aprobada en cifin(Scenario: usuario sin dato seguro solicita producto)  Time elapsed: 0.001 s  <<< FAILURE!
+Then La peticion debe ser contestada por datacredito(| verde |)  Time elapsed: 0 s  <<< FAILURE!
 java.lang.AssertionError: 
 
-Expected: <10999>
-     but: was <10236>
+Expected: <0>
+     but: was <500>
 
-Scenario: usuario sin dato seguro solicita producto  Time elapsed: 0.001 s  <<< FAILURE!
+| verde |  Time elapsed: 0 s  <<< FAILURE!
 java.lang.AssertionError: 
 
-Expected: <10999>
-     but: was <10236>
+Expected: <0>
+     but: was <500>
+
+Then La peticion debe ser contestada por cifin(| azul |)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "00010999"
+     but: was null
+
+| azul |  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "00010999"
+     but: was null
+
+Then La peticion debe ser contestada por cifin(| verde |)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "00010999"
+     but: was null
+
+| verde |  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "00010999"
+     but: was null
 

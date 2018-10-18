@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="co.com.ath.automation.features.Runner" time="123.965" tests="88" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="co.com.ath.automation.features.Runner" time="55.442" tests="80" errors="0" skipped="0" failures="8">
   <properties>
-    <property name="idea.version" value="2018.2.2"/>
+    <property name="idea.version" value="2018.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="cucumber.options" value="--tags @authentication"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.60-b23"/>
     <property name="user.country.format" value="CO"/>
@@ -47,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.2.2 clean verify -Denv=staging -Dcucumber.options=--tags @authentication"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.2.3 clean verify -Denv=staging"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -65,116 +64,132 @@
     <property name="ftp.nonProxyHosts" value="LocalServer|*.LocalServer|LocalServer1|*.LocalServer1|sso.ath.com.co|*.sso.ath.com.co|athmbx02.ath.net|*.athmbx02.ath.net|athmbx03.ath.net|*.athmbx03.ath.net|athmbxcont.ath.net|*.athmbxcont.ath.net|10.129.0.214|10.129.0.215|10.129.0.51|ath.com.co|*.ath.com.co|athgatsvr.ath.c|*.athgatsvr.ath.c|mail.ath.net|*.mail.ath.net|outlook.ath.net|*.outlook.ath.net|correo.ath.net|*.correo.ath.net|autodiscover.ath.net|*.autodiscover.ath.net|correo.ath.com.co|*.correo.ath.com.co|intranetcorporativa.central.net|*.intranetcorporativa.central.net|intraweb.ath.com.co|*.intraweb.ath.com.co|10.129.68.46|intraweb.ath.com.co|*.intraweb.ath.com.co|172.17.5.237|10.130.2.148|10.130.2.149"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Given dato seguro en rojo solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo solicita producto en azul" time="0.002"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo solicita producto en azul" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo solicita producto en azul" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo solicita producto en azul" time="2.058"/>
-  <testcase name="Given dato seguro en rojo solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo solicita producto en verde" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo solicita producto en verde" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo solicita producto en verde" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo solicita producto en verde" time="0.13"/>
-  <testcase name="Given dato seguro en rojo solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo solicita producto en rojo" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo solicita producto en rojo" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo solicita producto en rojo" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo solicita producto en rojo" time="0.141"/>
-  <testcase name="Given dato seguro en rojo y verde solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en rojo" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en rojo" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en rojo" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo y verde solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en rojo" time="0.074"/>
-  <testcase name="Given dato seguro en rojo y verde solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en verde" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en verde" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en verde" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en verde" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo y verde solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en verde" time="0.11"/>
-  <testcase name="Given dato seguro en rojo y verde solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en azul" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en azul" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en azul" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo y verde solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo y verde solicita producto en azul" time="0.115"/>
-  <testcase name="Given dato seguro en rojo y azul solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en rojo" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en rojo" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en rojo" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo y azul solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en rojo" time="0.089"/>
-  <testcase name="Given dato seguro en rojo y azul solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en verde" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en verde" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en verde" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo y azul solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en verde" time="0.094"/>
-  <testcase name="Given dato seguro en rojo y azul solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en azul" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en azul" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en azul" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en azul" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo y azul solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo y azul solicita producto en azul" time="0.102"/>
-  <testcase name="Given dato seguro en rojo - azul y verde solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en rojo" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en rojo" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en rojo" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en rojo" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en rojo" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en rojo" time="0.167"/>
-  <testcase name="Given dato seguro en rojo - azul y verde solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en verde" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en verde" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en verde" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en verde" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en verde" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en verde" time="0.131"/>
-  <testcase name="Given dato seguro en rojo - azul y verde solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en azul" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en azul" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en azul" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en azul" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en azul" classname="Scenario: usuario con dato seguro en rojo - azul y verde solicita producto en azul" time="0.117"/>
-  <testcase name="Given dato seguro en verde solicita producto en azul" classname="Scenario: usuario con dato seguro en verde solicita producto en azul" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en verde solicita producto en azul" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en verde" classname="Scenario: usuario con dato seguro en verde solicita producto en azul" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en verde solicita producto en azul" classname="Scenario: usuario con dato seguro en verde solicita producto en azul" time="0.159"/>
-  <testcase name="Given dato seguro en verde solicita producto en verde" classname="Scenario: usuario con dato seguro en verde solicita producto en verde" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en verde solicita producto en verde" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en verde" classname="Scenario: usuario con dato seguro en verde solicita producto en verde" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en verde solicita producto en verde" classname="Scenario: usuario con dato seguro en verde solicita producto en verde" time="0.136"/>
-  <testcase name="Given dato seguro en verde solicita producto en rojo" classname="Scenario: usuario con dato seguro en verde solicita producto en rojo" time="0.001"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en verde solicita producto en rojo" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en verde" classname="Scenario: usuario con dato seguro en verde solicita producto en rojo" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en verde solicita producto en rojo" classname="Scenario: usuario con dato seguro en verde solicita producto en rojo" time="0.142"/>
-  <testcase name="Given dato seguro en verde y azul solicita producto en rojo" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en rojo" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en rojo" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en azul" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en rojo" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en verde y azul solicita producto en rojo" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en rojo" time="0.152"/>
-  <testcase name="Given dato seguro en verde y azul solicita producto en verde" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en verde" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en verde" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en verde" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en verde" time="0.006">
-    <failure message="&#10;Expected: &lt;10029&gt;&#10;     but: was &lt;10236&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+  <testcase name="Given un usuario con datos seguro en rojo solicita autenticacion en el banco azul" classname="| rojo | azul | rojo |" time="0.001"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo | azul | rojo |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el rojo" classname="| rojo | azul | rojo |" time="0"/>
+  <testcase name="| rojo | azul | rojo |" classname="| rojo | azul | rojo |" time="0.006"/>
+  <testcase name="Given un usuario con datos seguro en rojo solicita autenticacion en el banco verde" classname="| rojo | verde | rojo |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo | verde | rojo |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el rojo" classname="| rojo | verde | rojo |" time="0"/>
+  <testcase name="| rojo | verde | rojo |" classname="| rojo | verde | rojo |" time="0.002"/>
+  <testcase name="Given un usuario con datos seguro en rojo solicita autenticacion en el banco rojo" classname="| rojo | rojo | rojo |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo | rojo | rojo |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el rojo" classname="| rojo | rojo | rojo |" time="0"/>
+  <testcase name="| rojo | rojo | rojo |" classname="| rojo | rojo | rojo |" time="0.007"/>
+  <testcase name="Given un usuario con datos seguro en azul solicita autenticacion en el banco azul" classname="| azul | azul | azul |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| azul | azul | azul |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el azul" classname="| azul | azul | azul |" time="0"/>
+  <testcase name="| azul | azul | azul |" classname="| azul | azul | azul |" time="0.002"/>
+  <testcase name="Given un usuario con datos seguro en azul solicita autenticacion en el banco verde" classname="| azul | verde | azul |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| azul | verde | azul |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el azul" classname="| azul | verde | azul |" time="0"/>
+  <testcase name="| azul | verde | azul |" classname="| azul | verde | azul |" time="0.003"/>
+  <testcase name="Given un usuario con datos seguro en azul solicita autenticacion en el banco rojo" classname="| azul | rojo | azul |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| azul | rojo | azul |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el azul" classname="| azul | rojo | azul |" time="0"/>
+  <testcase name="| azul | rojo | azul |" classname="| azul | rojo | azul |" time="0.002"/>
+  <testcase name="Given un usuario con datos seguro en verde solicita autenticacion en el banco azul" classname="| verde | azul | verde |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| verde | azul | verde |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el verde" classname="| verde | azul | verde |" time="0"/>
+  <testcase name="| verde | azul | verde |" classname="| verde | azul | verde |" time="0.002"/>
+  <testcase name="Given un usuario con datos seguro en verde solicita autenticacion en el banco verde" classname="| verde | verde | verde |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| verde | verde | verde |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el verde" classname="| verde | verde | verde |" time="0"/>
+  <testcase name="| verde | verde | verde |" classname="| verde | verde | verde |" time="0.003"/>
+  <testcase name="Given un usuario con datos seguro en verde solicita autenticacion en el banco rojo" classname="| verde | rojo | verde |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| verde | rojo | verde |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el verde" classname="| verde | rojo | verde |" time="0"/>
+  <testcase name="| verde | rojo | verde |" classname="| verde | rojo | verde |" time="0.001"/>
+  <testcase name="Given un usuario con datos seguro en rojo - azul solicita autenticacion en el banco azul" classname="| rojo - azul | azul | azul |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo - azul | azul | azul |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el azul" classname="| rojo - azul | azul | azul |" time="0"/>
+  <testcase name="| rojo - azul | azul | azul |" classname="| rojo - azul | azul | azul |" time="0.003"/>
+  <testcase name="Given un usuario con datos seguro en rojo - azul solicita autenticacion en el banco verde" classname="| rojo - azul | verde | rojo |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo - azul | verde | rojo |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el rojo" classname="| rojo - azul | verde | rojo |" time="0.001"/>
+  <testcase name="| rojo - azul | verde | rojo |" classname="| rojo - azul | verde | rojo |" time="0.005"/>
+  <testcase name="Given un usuario con datos seguro en rojo - azul solicita autenticacion en el banco rojo" classname="| rojo - azul | rojo | rojo |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo - azul | rojo | rojo |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el rojo" classname="| rojo - azul | rojo | rojo |" time="0"/>
+  <testcase name="| rojo - azul | rojo | rojo |" classname="| rojo - azul | rojo | rojo |" time="0.001"/>
+  <testcase name="Given un usuario con datos seguro en rojo - verde solicita autenticacion en el banco azul" classname="| rojo - verde | azul | rojo |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo - verde | azul | rojo |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el rojo" classname="| rojo - verde | azul | rojo |" time="0"/>
+  <testcase name="| rojo - verde | azul | rojo |" classname="| rojo - verde | azul | rojo |" time="0.003"/>
+  <testcase name="Given un usuario con datos seguro en rojo - verde solicita autenticacion en el banco verde" classname="| rojo - verde | verde | verde |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo - verde | verde | verde |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el verde" classname="| rojo - verde | verde | verde |" time="0"/>
+  <testcase name="| rojo - verde | verde | verde |" classname="| rojo - verde | verde | verde |" time="0.002"/>
+  <testcase name="Given un usuario con datos seguro en rojo - verde solicita autenticacion en el banco rojo" classname="| rojo - verde | rojo | rojo |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo - verde | rojo | rojo |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el rojo" classname="| rojo - verde | rojo | rojo |" time="0"/>
+  <testcase name="| rojo - verde | rojo | rojo |" classname="| rojo - verde | rojo | rojo |" time="0.001"/>
+  <testcase name="Given un usuario con datos seguro en rojo - azul - verde solicita autenticacion en el banco azul" classname="| rojo - azul - verde | azul | azul |" time="0.001"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| rojo - azul - verde | azul | azul |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por el azul" classname="| rojo - azul - verde | azul | azul |" time="0.001"/>
+  <testcase name="| rojo - azul - verde | azul | azul |" classname="| rojo - azul - verde | azul | azul |" time="2.574"/>
+  <testcase name="Given un usuario que esta registrado en datacredito solicita validacion en el banco azul" classname="| azul |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| azul |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| azul |" time="0.002"/>
+  <testcase name="Then La peticion debe ser contestada por datacredito" classname="| azul |" time="0.006">
+    <failure message="&#10;Expected: &lt;0&gt;&#10;     but: was &lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
-Expected: <10029>
-     but: was <10236>
+Expected: <0>
+     but: was <500>
 ]]></failure>
   </testcase>
-  <testcase name="Scenario: usuario con dato seguro en verde y azul solicita producto en verde" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en verde" time="0.006">
-    <failure message="&#10;Expected: &lt;10029&gt;&#10;     but: was &lt;10236&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+  <testcase name="| azul |" classname="| azul |" time="0.006">
+    <failure message="&#10;Expected: &lt;0&gt;&#10;     but: was &lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
-Expected: <10029>
-     but: was <10236>
+Expected: <0>
+     but: was <500>
 ]]></failure>
   </testcase>
-  <testcase name="Given dato seguro en verde y azul solicita producto en azul" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en azul" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en azul" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en azul" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en azul" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en verde y azul solicita producto en azul" classname="Scenario: usuario con dato seguro en verde y azul solicita producto en azul" time="0.118"/>
-  <testcase name="Given dato seguro en azul solicita producto en rojo" classname="Scenario: usuario con dato seguro en azul solicita producto en rojo" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en azul solicita producto en rojo" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en azul" classname="Scenario: usuario con dato seguro en azul solicita producto en rojo" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en azul solicita producto en rojo" classname="Scenario: usuario con dato seguro en azul solicita producto en rojo" time="0.176"/>
-  <testcase name="Given dato seguro en azul solicita producto en verde" classname="Scenario: usuario con dato seguro en azul solicita producto en verde" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en azul solicita producto en verde" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en azul" classname="Scenario: usuario con dato seguro en azul solicita producto en verde" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en azul solicita producto en verde" classname="Scenario: usuario con dato seguro en azul solicita producto en verde" time="0.127"/>
-  <testcase name="Given dato seguro en azul solicita producto en azul" classname="Scenario: usuario con dato seguro en azul solicita producto en azul" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario con dato seguro en azul solicita producto en azul" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en azul" classname="Scenario: usuario con dato seguro en azul solicita producto en azul" time="0"/>
-  <testcase name="Scenario: usuario con dato seguro en azul solicita producto en azul" classname="Scenario: usuario con dato seguro en azul solicita producto en azul" time="0.14"/>
-  <testcase name="Given usuario sin dato seguro solicita producto" classname="Scenario: usuario sin dato seguro solicita producto" time="0"/>
-  <testcase name="When el envia la peticion para ser autenticado" classname="Scenario: usuario sin dato seguro solicita producto" time="0"/>
-  <testcase name="Then la peticion debe ser aprobada en cifin" classname="Scenario: usuario sin dato seguro solicita producto" time="0.001">
-    <failure message="&#10;Expected: &lt;10999&gt;&#10;     but: was &lt;10236&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+  <testcase name="| azul |" classname="| azul |" time="0.001">
+    <failure message="&#10;Expected: &quot;00010999&quot;&#10;     but: was null" type="java.lang.AssertionError">java.lang.AssertionError: 
 
-Expected: <10999>
-     but: was <10236>
+Expected: "00010999"
+     but: was null
+</failure>
+  </testcase>
+  <testcase name="Given un usuario que esta registrado en datacredito solicita validacion en el banco verde" classname="| verde |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| verde |" time="0"/>
+  <testcase name="When el envia la peticion para ser autenticado" classname="| verde |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por datacredito" classname="| verde |" time="0">
+    <failure message="&#10;Expected: &lt;0&gt;&#10;     but: was &lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expected: <0>
+     but: was <500>
 ]]></failure>
   </testcase>
-  <testcase name="Scenario: usuario sin dato seguro solicita producto" classname="Scenario: usuario sin dato seguro solicita producto" time="0.001">
-    <failure message="&#10;Expected: &lt;10999&gt;&#10;     but: was &lt;10236&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+  <testcase name="| verde |" classname="| verde |" time="0">
+    <failure message="&#10;Expected: &lt;0&gt;&#10;     but: was &lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
-Expected: <10999>
-     but: was <10236>
+Expected: <0>
+     but: was <500>
 ]]></failure>
+  </testcase>
+  <testcase name="| verde |" classname="| verde |" time="0.001">
+    <failure message="&#10;Expected: &quot;00010999&quot;&#10;     but: was null" type="java.lang.AssertionError">java.lang.AssertionError: 
+
+Expected: "00010999"
+     but: was null
+</failure>
+  </testcase>
+  <testcase name="Given un usuario que esta registrado en cifin solicita validacion en el banco azul" classname="| azul |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por cifin" classname="| azul |" time="0.001">
+    <failure message="&#10;Expected: &quot;00010999&quot;&#10;     but: was null" type="java.lang.AssertionError">java.lang.AssertionError: 
+
+Expected: "00010999"
+     but: was null
+</failure>
+  </testcase>
+  <testcase name="Given un usuario que esta registrado en cifin solicita validacion en el banco verde" classname="| verde |" time="0"/>
+  <testcase name="Then La peticion debe ser contestada por cifin" classname="| verde |" time="0">
+    <failure message="&#10;Expected: &quot;00010999&quot;&#10;     but: was null" type="java.lang.AssertionError">java.lang.AssertionError: 
+
+Expected: "00010999"
+     but: was null
+</failure>
   </testcase>
 </testsuite>

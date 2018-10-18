@@ -15,30 +15,11 @@ public class ServicePaths {
   }
 
   public static URL pathSignDocument() throws MalformedURLException {
-    return new URL(environment.datapower() + environment.url_signature_6());
+    return new URL(environment.datapower() + environment.urlSignatureV6());
   }
 
   public static URL pathAuthentication() throws MalformedURLException {
-    return new URL(environment.datapower() + environment.url_authentication_v5());
+    return new URL(environment.datapower() + environment.urlAuthenticationV7());
   }
 
-  public static URL pathDeceval_consultaSinPdf() throws MalformedURLException {
-    return new URL(environment.url_ConsultaPagareDecevalSinPdf());
-  }
-
-  public static URL pathDeceval_consultaConPdf() throws MalformedURLException {
-    return new URL(environment.url_ConsultaPagareDecevalConPdf());
-  }
-
-  public static URL pathDeceval_crearotorgante() throws MalformedURLException {
-    return new URL(environment.url_crearGiratorDeceval());
-  }
-
-  public static URL pathDeceval_crearpagare() throws MalformedURLException {
-    return new URL(environment.url_CrearPagareDeceval());
-  }
-
-  public static URL pathDeceval_firmarpagare() throws MalformedURLException {
-    return new URL(environment.url_firmarPagareDeceval());
-  }
 }
