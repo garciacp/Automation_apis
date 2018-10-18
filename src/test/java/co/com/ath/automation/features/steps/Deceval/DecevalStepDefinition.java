@@ -266,7 +266,7 @@ public class DecevalStepDefinition {
   @Then("^el servicio debe respoder pagare cancelado$")
   public void el_servicio_debe_respoder_con_la_cancelacion_del_pagare_exitoso() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DECEVAL, DecevalStaticCode.COD_ANULACION_PAGARE_OK);
+    DecevalAssertion.assertionTransaccionAprobada(DecevalStaticCode.COD_DESC_ERROR, DecevalStaticCode.COD_CANCELACION_EXITOSA);
   }
 
 

@@ -23,6 +23,7 @@ public class DecevalStaticCode {
     public static final String COD_ERROR = "codigoError";
     public static final String COD_CAMBIO_ESTADO_PAGARE_OK = "SDL.SE.EPF.2";
     public static final String COD_ANULACION_PAGARE_OK = "SDL.SE.0180";
+    public static final String COD_CANCELACION_EXITOSA = "SDL.SE.0000: Exitoso. - Todos los pagares se cancelaron correctamente.";
     public static final String COD_ESTADO = "codigoEstado";
     public static final String COD_PAGARE_SIN_ESTADO_PROVISIONAL = "8610";
 }

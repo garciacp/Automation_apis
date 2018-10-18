@@ -67,7 +67,7 @@ public class DecevalRequest {
 
     try {
       String consultarPagareSinPdfBody = IOUtils.toString(
-          this.getClass().getClassLoader().getResourceAsStream("json/Deceval_ConsultaSinPdf.json"),
+          this.getClass().getClassLoader().getResourceAsStream("json/Deceval_Consulta_SinPdf.json"),
           StandardCharsets.UTF_8
       );
       JSONObject jObject  = new JSONObject(consultarPagareSinPdfBody);
